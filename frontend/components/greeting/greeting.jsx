@@ -28,9 +28,12 @@ class Greeting extends React.Component {
           </div>
           :
           <div>
-            <Link className="login" to="/login">Log in</Link>
+            <button onClick={()=>this.props.history.push('/login')}>Log in</button>
+            {/* <Link className="login" to="/login">Log in</Link> */}
             <br />
-            <Link className="signup" to="/signup">Sign up</Link>
+            {/* <Link className="signup" to="/signup">Sign up</Link> */}
+
+            <button onClick={()=>this.props.history.push('/signup')}>Sign up</button>
           </div>}
       </div>
     )
