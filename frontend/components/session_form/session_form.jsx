@@ -57,7 +57,7 @@ class SessionForm extends React.Component {
                 <div className='errors'>
                 {this.renderErrors()}
                 </div>
-                <h4 className="formTitle">{this.props.formType === 'Login' ? <p className="formTitle">LOG IN</p> : <p className="formTitle">INTRODUCE YOURSELF</p>}</h4>
+                <h4 className="formTitle">{this.props.formType === 'Login' ? <p className="formTitle">Log in</p> : <p className="formTitle">INTRODUCE YOURSELF</p>}</h4>
             
                 <div className="form">
                     {this.props.formType === 'Signup'?
