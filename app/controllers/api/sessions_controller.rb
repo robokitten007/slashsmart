@@ -7,7 +7,7 @@ class Api::SessionsController < ApplicationController
 
     if @user
       login(@user)
-      render 'api/users/show'
+      render "api/users/show.json.jbuilder"
     else
       render json: ["Whopps! We couldn't find an account for that email and password :("], status: 401
     end

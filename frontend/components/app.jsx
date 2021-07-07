@@ -14,11 +14,12 @@ const App = () => {
     // )
     return(    
     <div>
-    <Route path="/" component={NavBarContainer} />
+    
     <Switch>
       <AuthRoute path="/signup" component={SignupFormContainer} />
-      <AuthRoute exact path="/" component={Splash} />
+      <Route path="/" component={NavBarContainer} />
     </Switch>
+    <AuthRoute exact path="/" component={Splash} />
     <AuthRoute path="/login" component={LoginFormContainer} />
     <ProtectedRoute path="/dashboard" component={DashboardContainer} />
   
