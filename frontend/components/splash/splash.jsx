@@ -6,6 +6,8 @@ const Splash = () => {
         <div>
             <h1 className='welcomeTitle'>Welcome to SlashSmart: I am the splash component</h1>
 
+
+        
         </div>
     )
 }
