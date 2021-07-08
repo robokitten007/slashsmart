@@ -1,0 +1,110 @@
+
+.body-container{
+    // display: flex;
+    // flex-flow: column wrap;
+    // justify-content: space-between;
+    height: 100%;
+    overflow: auto;
+    background-image: image-url('splash_bg.png');
+
+}
+.full-form {
+    display:flex;
+    flex-flow: column;
+    color: #333333;
+    font-family: Lato;
+    font-size: 18px;
+    background-image: image-url('splash_bg.png');
+    overflow: auto;
+    align-items: center;
+    // margin-left: 25%;
+    // margin-right: 25%;
+
+}
+
+.form{
+    // margin-left:25%;
+    // margin-right:25%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding:32px 64px;
+    border-radius: 32px;
+    border-color: rbg(230,232,238) ;
+    background-color: white;
+    border-style: solid;
+    border: 0px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 24px;
+    height: 600px;
+    width: 600px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.form-title{
+    font-size: 24px;
+}
+
+input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px, gray;
+    font-size: 20px;
+}
+
+.regular-btn{
+    background-color: #1cc29f;
+    border-radius: 5px;
+    border:0px;
+    padding: 16 64 64 16;
+    height: 60px;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+   color:white;
+   font-size: 20px;
+   cursor: pointer;
+   box-shadow: 0 4px 2px -2px gray;
+}
+
+.demo-btn{
+    background-color: gray;
+    border-radius: 5px;
+    border:0px;
+    padding: 16 64 64 16;
+    height: 60px;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+   color:white;
+   font-size: 20px;
+   cursor: pointer; 
+   box-shadow: 0 4px 2px -2px gray;  
+}
+.regular-btn:hover {
+  box-shadow: none;
+  position: relative;
+  top: 2px;
+ }
+.demo-btn:hover {
+  box-shadow: none;
+  position: relative;
+  top: 2px;
+ }
+
+ .errors{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+//   color: white;
+//   background-color: #c45;
+//   border-color: #b34;
+  padding:12px;
+  color: #c45;
+  width: 90%;
+  border-radius: 5px;
+  text-align: center;
+ }
+
+
+
