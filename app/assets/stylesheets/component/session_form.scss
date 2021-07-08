@@ -1,11 +1,9 @@
 
 .body-container{
-    // display: flex;
-    // flex-flow: column wrap;
-    // justify-content: space-between;
+    
     height: 100%;
     overflow: auto;
-    background-image: image-url('splash_bg.png');
+    
 
 }
 .full-form {
@@ -17,14 +15,10 @@
     background-image: image-url('splash_bg.png');
     overflow: auto;
     align-items: center;
-    // margin-left: 25%;
-    // margin-right: 25%;
-
 }
 
 .form{
-    // margin-left:25%;
-    // margin-right:25%;
+
     margin-top: 5%;
     margin-bottom: 5%;
     padding:32px 64px;
@@ -96,9 +90,6 @@ input{
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 20px;
-//   color: white;
-//   background-color: #c45;
-//   border-color: #b34;
   padding:12px;
   color: #c45;
   width: 90%;

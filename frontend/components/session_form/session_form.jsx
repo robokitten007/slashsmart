@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import Footer from '../footer/footer'
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -62,14 +62,14 @@ class SessionForm extends React.Component {
             
                     {this.props.formType === 'Signup'?
                         (<a href="#">
-                        <img className='formLogo' src={window.logo} alt="SlashSmart" />
+                        <img src={window.logo} alt="SlashSmart" />
                     </a>) : null}
-                    <form className="sessionForm" onSubmit={this.handleSubmit}>
+                    <form onSubmit={this.handleSubmit}>
                          {this.props.formType === 'Signup'?
 
-                        <label className='nameLabel'>
+                        <label >
                             <p>Hi there! My name is</p> 
-                            <input className='nameField' type="text" value={this.state.name} onChange={this.update('name')}/>
+                            <input type="text" value={this.state.name} onChange={this.update('name')}/>
                         </label> : null}
                          
 
@@ -82,8 +82,8 @@ class SessionForm extends React.Component {
                         <br/>
                         <br/>
                         
-                        <label className='passwordLabel'>{this.props.formType === 'Signup' ? <p>And here's my password:</p> : <p>Password</p>}
-                          <input className='passwordField' type="password" value={this.state.password} onChange={this.update('password')} />
+                        <label>{this.props.formType === 'Signup' ? <p>And here's my password:</p> : <p>Password</p>}
+                          <input type="password" value={this.state.password} onChange={this.update('password')} />
                         </label>
                     
                         <br/>
@@ -95,10 +95,12 @@ class SessionForm extends React.Component {
                             <br/>
                             {this.props.formType === 'Login' ? <button type='button' className="demo-btn" onClick={this.demoLogin}>Demo login</button> : null}
                         </div>
-                    
+
                     </form>
                 </div>
             </div>
+        {this.props.formType ==='Login' ? <Footer /> : null}
+
         </div>
         )
     }
