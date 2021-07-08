@@ -1,11 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';  
-
+import Footer from '../footer/footer'
 
 const Splash = () => {
     return (
     <div className='body-container'>
-
+     <div className='transition-container'>
         <section className='transition'> 
             <div className='left-1'>
                 <p>Less stress when sharing expenses <span>on trips.</span>
@@ -16,14 +16,13 @@ const Splash = () => {
                 <h2>
                     keep track of your shared expenses and balances with housemates, trips, groups, friends, and family.
                 </h2>
-               {/* <Link className='signup' onClick={()=>props.history.push('/signup')}>Sign up</Link> */}
                 <Link className='signup' to='/signup'>Sign up</Link>
             </div>
             <div className='right-1'>
                  <img  src={window.ariplane_icon} alt="travel" />    
             </div>
         </section>
-
+    </div>
         <section className='features'>
             <div className='left-2'>
                 <div className='left-detail'>
@@ -46,14 +45,13 @@ const Splash = () => {
                  <img className='feature-img' src={window.organize_expense} alt="organize" />
                  
              </div>
+            
         </section>
 
-
-        <section className='footer'>
-            footer here
-        </section>
+        <Footer />
 
     </div>
+
     )
 }
 

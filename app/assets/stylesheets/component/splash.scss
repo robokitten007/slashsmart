@@ -4,10 +4,13 @@
     justify-content: space-between;
     height: 100%;
     overflow: auto;
-    // background-image: image-url('splash_bg.png');
 
 }
 
+.transition-container{
+  background-image: image-url('splash_bg.png');
+
+}
 .transition{
     display: flex;
     flex-flow: row wrap;
@@ -17,7 +20,6 @@
     height:33.3%;
     font-size: 40px;
     font-family: 'Montserrat', sans-serif;
-    background-image: image-url('splash_bg.png');
 
 }
 
@@ -69,9 +71,9 @@ display: flex;
 
 }
 .right-1 img{
-    height: 400px;
-   
+    height: 400px; 
 }
+
 .signup {
   display: flex;
   justify-content: center;
@@ -106,18 +108,17 @@ display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     height: 33.3%;
-    background-image:image-url('splash_bg.png');
 
 }
 
  .left-2{
-    //  background: image-url('splash_bg.png');
     background-color: rgb(55,59,63);
     width: 50%;
     display: flex;
    justify-content: space-between;
    flex-direction: column;
  }
+
  .right-2{
     width: 50%;
     justify-content: center;
@@ -126,6 +127,7 @@ display: flex;
     flex-direction: column;
     justify-content: space-between;
  }
+
 // .left-detail{
 //     height:33.3%;
 //     display: flex;
@@ -139,7 +141,11 @@ display: flex;
     width: auto; 
     max-width: 335px; 
     max-height:650px;
+    
  }
+
+
+
 .features h1{
     display: flex;
     justify-content: center;
@@ -151,6 +157,7 @@ display: flex;
     font-weight: 700;
     line-height: 36px;
     margin-top: 15px;
+    
     
 }
 
@@ -169,8 +176,39 @@ display: flex;
 
 
 
- .footer{
-     height: 33.3%;
-     margin-left: 10%;
-     margin-right:10%;
- }
+//  .footer{
+//     display: flex;
+//     flex-direction: row;
+//     height: 33.3%;
+//     justify-content: space-between;
+//     margin-top: 80px;
+//     margin-left: 10%;
+//     margin-right:10%;
+//     font-size: 16px;
+//     font-family: 'Lato', sans-serif;
+   
+    
+//  }
+//  .footer-left{
+//    display: flex;
+//    flex-direction: column;
+//  }
+
+//  .footer-left h1{
+//   font-size: 14px;
+//   font-weight: 700;
+//   margin-bottom: 8px;
+//  }
+
+//  .footer-left a{
+//   padding: 5px;
+//   text-decoration: none;
+//   font-size: 14px;
+//   line-height: 21px;
+//   color: gray
+
+
+//  }
+//  #footer{
+//    width: 100%;
+//  }

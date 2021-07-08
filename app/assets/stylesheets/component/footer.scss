@@ -1,0 +1,36 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    height: 33.3%;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-left: 10%;
+    margin-right:10%;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+   
+    
+ }
+ .footer-left{
+   display: flex;
+   flex-direction: column;
+ }
+
+ .footer-left h1{
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+ }
+
+ .footer-left a{
+  padding: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 21px;
+  color: gray
+
+
+ }
+ #footer{
+   width: 100%;
+ }
