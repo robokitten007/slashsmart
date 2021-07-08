@@ -22,18 +22,19 @@ class Greeting extends React.Component {
       </a>
 
         {this.props.currentUser ?
-          <div>
+          <div className='logout'>
             <h3>{this.props.currentUser.name}</h3>
-            <button className='logout' onClick={this.handleClick}>Log Out</button>
+            <Link className='logout-lnk' onClick={this.handleClick}>Log Out</Link>
           </div>
           :
-          <div>
-            <button onClick={()=>this.props.history.push('/login')}>Log in</button>
-            {/* <Link className="login" to="/login">Log in</Link> */}
-            <br />
-            {/* <Link className="signup" to="/signup">Sign up</Link> */}
+          <div className='greeting-links'>
+            <Link className='login-lnk' to='/login'>Log in</Link>
+            <Link className='signup-lnk' to='/signup'>Sign up</Link>
+          
 
-            <button onClick={()=>this.props.history.push('/signup')}>Sign up</button>
+            {/* <Link className='login-lnk' onClick={()=>this.props.history.push('/login')}>Log in</Link> */}
+            <br />
+            {/* <Link className='signup-lnk'onClick={()=>this.props.history.push('/signup')}>Sign up</Link> */}
           </div>}
       </div>
     )

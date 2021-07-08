@@ -52,14 +52,14 @@ class SessionForm extends React.Component {
 
       render() {
         return (
-            
-            <div className="fullForm">
+         <div className='body-container'>
+            <div className="full-form">
                 <div className='errors'>
                 {this.renderErrors()}
                 </div>
-                <h4 className="formTitle">{this.props.formType === 'Login' ? <p className="formTitle">Log in</p> : <p className="formTitle">INTRODUCE YOURSELF</p>}</h4>
-            
                 <div className="form">
+                <h4 className="form-title">{this.props.formType === 'Login' ? <p className="formTitle">Log in</p> : <p className="formTitle">INTRODUCE YOURSELF</p>}</h4>
+            
                     {this.props.formType === 'Signup'?
                         (<a href="#">
                         <img className='formLogo' src={window.logo} alt="SlashSmart" />
@@ -76,7 +76,7 @@ class SessionForm extends React.Component {
                         <br/>
                         <br/>
                         
-                        <label className='emailLabel'>{this.props.formType === 'Signup' ? <p>Here's my email address:</p> : <p>Email address</p>}
+                        <label className='email-label'>{this.props.formType === 'Signup' ? <p>Here's my email address:</p> : <p>Email address</p>}
                              <input className='emailField' type="text" value={this.state.email} onChange={this.update('email')} />
                         </label>
                         <br/>
@@ -89,14 +89,17 @@ class SessionForm extends React.Component {
                         <br/>
                         <br/>
 
-                        <div className="formBtns">
-                            <button className='formSubmit'>{this.props.formType === 'Signup' ? <p>Sign me up!</p> : <p>Log in</p>}</button>
-                            {this.props.formType === 'Login' ? <button type='button' className="demoBtn" onClick={this.demoLogin}>Demo login</button> : null}
+                        <div className="form-btns">
+                            <button className='regular-btn'>{this.props.formType === 'Signup' ? <p>Sign me up!</p> : <p>Log in</p>}</button>
+                            <br/>
+                            <br/>
+                            {this.props.formType === 'Login' ? <button type='button' className="demo-btn" onClick={this.demoLogin}>Demo login</button> : null}
                         </div>
                     
                     </form>
                 </div>
             </div>
+        </div>
         )
     }
 
