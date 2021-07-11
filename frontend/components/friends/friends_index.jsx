@@ -1,6 +1,4 @@
 import React from 'react';
-import { deleteFriend } from '../../actions/friend_actions';
-import { addFriend, fetchFriends } from '../../util/friend_util';
 import FriendsIndexItem from './friends_index_item';
 
 class FriendsIndex extends React.Component{
@@ -23,7 +21,7 @@ class FriendsIndex extends React.Component{
            <div>
                <p>friend index here</p>
                <ul>
-            {console.log(currentUser.id)}
+
             {friendships.map((friendship)=>(
             
                 <FriendsIndexItem

@@ -15,10 +15,6 @@ class User < ApplicationRecord
     foreign_key: :friend_id,
     class_name: :Friend
 
-  
-  # has_many :favorite_benches,
-  #   through: :favorites,
-  #   source: :bench
 
   def self.find_by_credentials(email, password)
     @user = User.find_by(email: email)

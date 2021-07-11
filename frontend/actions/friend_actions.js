@@ -18,7 +18,8 @@ const receiveFriend = (friend)=>({
 })
 
 const removeFriend = (id)=>({
-    type: REMOVE_FRIEND
+    type: REMOVE_FRIEND,
+    id
 })
 
 const friendErrors = (error) =>({
@@ -45,7 +46,7 @@ export const addFriend = (email) => dispatch =>(
 
 export const deleteFriend = (id) => dispatch =>(
     FriendsUtil.removeFriend(id)
-        .then(()=>(dispatch(removeFriend(id))),
+        .then((id)=>(dispatch(removeFriend(id))),
         err => dispatch(friendErrors(err.responseJSON)))
 )
 

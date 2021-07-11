@@ -1,5 +1,5 @@
 
-export const addFriend = email=>(
+export const addFriend = (email) =>(
     $.ajax({
         method: 'post',
         url: 'api/friends',

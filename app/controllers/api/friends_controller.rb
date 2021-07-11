@@ -19,13 +19,16 @@ class Api::FriendsController < ApplicationController
         @friend = User.find_by(email: params[:email])
 
         if @friend.nil?
-            render json:["Opps, looks like your friend has not joined yet"], status: 401
+            render json:['user not found'], status: 401
+
         else
            @friend_id = @friend.id
            @friendship = Friend.new(user_id: @user_id, friend_id: @friend_id)
              if @friendship.save
-                render 'api/friends/index.json.jbuilder'
+
+                render :show
              else
+            
                 render json: ["friendship can't be saved"]
              end 
         end 
@@ -37,7 +40,7 @@ class Api::FriendsController < ApplicationController
         friendship = Friend.find_by(id: params[:id])
 
         if friendship.destroy
-            render 'api/friends/index.json.jbuilder'
+            render json: friendship.id
         else
             render json: ['Friend cannot be deleted'], status: 401
         end   
