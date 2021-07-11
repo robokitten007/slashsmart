@@ -24,7 +24,7 @@ class Api::FriendsController < ApplicationController
            @friend_id = @friend.id
            @friendship = Friend.new(user_id: @user_id, friend_id: @friend_id)
              if @friendship.save
-                render :index
+                render 'api/friends/index.json.jbuilder'
              else
                 render json: ["friendship can't be saved"]
              end 
@@ -39,7 +39,7 @@ class Api::FriendsController < ApplicationController
         if friendship.destroy
             render 'api/friends/index.json.jbuilder'
         else
-            render jason: ['Friend cannot be deleted'], status: 401
+            render json: ['Friend cannot be deleted'], status: 401
         end   
     end
 end

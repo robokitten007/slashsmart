@@ -8,12 +8,12 @@ class FriendsIndexItem extends React.Component{
     }
 
     render (){
-        const {currentUser, friend, deleteFriend} = this.props
+        const {currentUser, friendship, deleteFriend} = this.props
         return (
            <li>
                <p>friends index item here</p>
-               <Link to='/dashboard'>{friend.name}</Link>
-               <button onClick={()=>deleteFriend()}>delete {friend.name}</button>
+               <Link to='/dashboard'>{friendship.friend}</Link>
+               <button onClick={()=>deleteFriend(friendship.id)}>delete {friendship.friend}</button>
            </li>
         )
     }

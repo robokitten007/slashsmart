@@ -6,13 +6,12 @@ import { fetchFriends, addFriend, deleteFriend } from '../../actions/friend_acti
 
 const mSTP = state =>({
     currentUser: state.entities.users[state.session.id],
-    friends: Object.values(state.entities.friends),
+    friendships: Object.values(state.entities.friends),
       
 })
 
 const mDTP = dispatch =>({
     fetchFriends: () => dispatch(fetchFriends()),
-    addFriend: (email) => dispatch(addFriend(email)),
     deleteFriend: (id) => dispatch(deleteFriend(id))  
 })
 
