@@ -2,16 +2,13 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
-import { AuthRoute, ProtectedRoute } from '../util/route_until';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import NavBarContainer from './navbar/navbar_container';
 import DashboardContainer from './dashboard/dashboard_container';
 import Splash from './splash/splash';
 
 const App = () => {
 
-    // return (
-    //     'app is working'
-    // )
     return(    
     <div>
     

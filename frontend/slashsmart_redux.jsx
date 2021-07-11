@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store'
+import {fetchFriends, addFriend, deleteFriend} from './actions/friend_actions' 
 
 document.addEventListener('DOMContentLoaded',()=>{
      let store;
@@ -13,6 +14,9 @@ document.addEventListener('DOMContentLoaded',()=>{
       }
     };
     store = configureStore(preloadedState);
+    window.addFriend = addFriend;
+    window.deleteFriend = deleteFriend;
+    window.fetchFriends = fetchFriends;
     delete window.currentUser;
   } else {
     store = configureStore();
