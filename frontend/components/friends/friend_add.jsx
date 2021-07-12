@@ -26,21 +26,19 @@ class FriendAdd extends React.Component{
     render (){
         return (
         <div>
-            <p>this is the add friend component</p>
-        <form onSubmit={this.handleSubmit}>ADD FRIEND
-        <br />
-        <br />
         
-            <label > FRIEND EMAIL
+        <form className='friend-add-form' onSubmit={this.handleSubmit}>
+            <h1>Add Friends</h1>
+            <div >
             <input type="text"
+                   placeholder = 'Enter an email address'
                    name="email"
                    value={this.state.email}
                    onChange={this.update("email")}
                  />
-        </label>
-        <button type='submit'>add friend</button>
+        <button type='submit'>Add Friend</button>
+            </div>
         </form>
-        
     </div>
         )}
 }

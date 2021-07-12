@@ -19,8 +19,8 @@ class FriendsIndex extends React.Component{
         const { deleteFriend} = this.props;
         return (
            <div>
-               <p>friend index here</p>
-               <ul>
+               
+               <ul className='friends-index'>
 
             {friendships.map((friendship)=>(
             
@@ -31,7 +31,6 @@ class FriendsIndex extends React.Component{
                     deleteFriend ={deleteFriend}
                     />           
             ))}
-                <p>bottom of friend index here</p>
             </ul>
         </div>   
 

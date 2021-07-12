@@ -9,34 +9,49 @@ class Dashboard extends React.Component {
         super(props)
     }
     
-
     render(){
 
         return (
+         <div className='main-dash-container'>
+            
             <div className='main-dash'>
 
                 <div className='left-dash'>
-                <h1>left bar of dashboard</h1> 
-                <ul>
-                    <li><FriendsIndexContainer /></li>
-                    <li> <FriendAddContainer /> </li>
-                </ul>
+                <h1>
+                    <a href="#/dashboard">Dashboard</a>
+                </h1> 
+                <div>
+                    <h1>
+                    <a href="#/dashboard">All expenses</a>
+                </h1>
+                </div>
+
+                <div className='friends-index-container'>
+                    <div className='friend-index-header'>
+                        <h2>FRIENDS</h2>
+                    </div>
+                    <FriendsIndexContainer />
+                    <FriendAddContainer />
+                </div>
                  
                 </div>
+                <div className='content-container'>
+                    <div className='mid-dash'>
+                        <h1>this is the mid-dash</h1>
+                        {/* <Switch>
+                            <Route path='/dashboard/:userId' component={FriendRemoveContainer} />
+                        </Switch> */}
 
-                <div className='mid-dash'>
+                    </div>
 
-                    <Switch>
-                        <Route path='/dashboard/:userId' component={FriendRemoveContainer} />
-                    </Switch>
-
+                    <div className='right-dash'>
+                            <Switch>
+                            <Route path='/dashboard/:userId' component={FriendRemoveContainer} />
+                        </Switch>
+                    </div>
                 </div>
-
-                <div className='right-dash'>
-                        {/* <FriendRemoveContainer />  */}
-                </div>
-               
             </div>
+         </div>
         )
     }
 }

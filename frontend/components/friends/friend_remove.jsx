@@ -10,9 +10,9 @@ class FriendRemove extends React.Component{
     render(){
         const {deleteFriend, id} = this.props
         return (
-            <div>
+            <div className='friend-setting'>
             <h1>FRIEND SETTINGS</h1>
-            <button onClick ={()=>deleteFriend(id)}>delete this friend </button>
+            <button onClick ={()=>deleteFriend(id)}>Remove this friend </button>
             </div>
         )
     }
