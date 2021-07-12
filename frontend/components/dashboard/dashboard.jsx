@@ -13,12 +13,29 @@ class Dashboard extends React.Component {
     render(){
 
         return (
-            <div>
-                <p>dashboard here: I am dashboard component</p>
-                
-                <FriendsIndexContainer />
-                <FriendAddContainer />
-                {/* <FriendRemoveContainer /> */}
+            <div className='main-dash'>
+
+                <div className='left-dash'>
+                <h1>left bar of dashboard</h1> 
+                <ul>
+                    <li><FriendsIndexContainer /></li>
+                    <li> <FriendAddContainer /> </li>
+                </ul>
+                 
+                </div>
+
+                <div className='mid-dash'>
+
+                    <Switch>
+                        <Route path='/dashboard/:userId' component={FriendRemoveContainer} />
+                    </Switch>
+
+                </div>
+
+                <div className='right-dash'>
+                        {/* <FriendRemoveContainer />  */}
+                </div>
+               
             </div>
         )
     }
