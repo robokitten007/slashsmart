@@ -132,10 +132,6 @@ class SessionForm extends React.Component {
                             {/* <label>{this.props.formType === 'Signup' ? <p className={show_flag}>And here's my password:</p> : <p>Password</p>}
                             <input type="password" value={this.state.password} onChange={this.update('password')} />
                             </label> */}
-                        
-                                <br/>
-                                <br/>
-
                                 <div className="form-btns">
                                     {/* <button className='regular-btn'>{this.props.formType === 'Signup' ? <p>Sign me up!</p> : <p>Log in</p>}</button> */}
                                     {this.props.formType === 'Signup' ? <button className='regular-btn' className='signup-btn'><p>Sign me up!</p></button> : 
