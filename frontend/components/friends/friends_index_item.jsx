@@ -12,8 +12,9 @@ class FriendsIndexItem extends React.Component{
         return (
            <li>
             
-               <Link className='friend-index-item' to={`/dashboard/${friendship.friend_id}`}>{friendship.friend}</Link>
-               {/* <button onClick={()=>deleteFriend(friendship.id)}>delete {friendship.friend}</button> */}
+               <Link  to={`/dashboard/${friendship.friend_id}`} className="fas fa-user">
+                 <span className='friend-index-item'>{friendship.friend}</span>
+                   </Link>
            </li>
         )
     }

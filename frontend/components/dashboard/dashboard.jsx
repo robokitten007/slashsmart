@@ -17,30 +17,38 @@ class Dashboard extends React.Component {
             <div className='main-dash'>
 
                 <div className='left-dash'>
-                <h1>
-                    <a href="#/dashboard">Dashboard</a>
-                </h1> 
-                <div>
-                    <h1>
-                    <a href="#/dashboard">All expenses</a>
-                </h1>
-                </div>
-
-                <div className='friends-index-container'>
-                    <div className='friend-index-header'>
-                        <h2>FRIENDS</h2>
+                        <h1>
+                            <a href="#/dashboard" className="fas fa-flag">
+                                <span className='left-dash-item'>Dashboard</span>
+                             </a>
+                        </h1> 
+                    <div>
+                        <h1>
+                            <a href="#/dashboard" className="fas fa-money-check">
+                                <span className='left-dash-item'>
+                                All expenses
+                                </span>
+                            </a>
+                        </h1>
                     </div>
-                    <FriendsIndexContainer />
-                    <FriendAddContainer />
-                </div>
+
+                    <div className='friends-index-container'>
+                        <div className='friend-index-header'>
+                            <h2>FRIENDS</h2>
+                        </div>
+                        <FriendsIndexContainer />
+                        <FriendAddContainer />
+                        <div className='personal-links'>
+                            <a href="https://www.linkedin.com/" target="_blank" className='fab fa-github fa-2x'></a>
+                            <a href="https://github.com/robokitten007" target="_blank" className='fab fa-linkedin fa-2x'></a>
+                        </div>
+                   
+                    </div>
                  
                 </div>
                 <div className='content-container'>
                     <div className='mid-dash'>
                         <h1>this is the mid-dash</h1>
-                        {/* <Switch>
-                            <Route path='/dashboard/:userId' component={FriendRemoveContainer} />
-                        </Switch> */}
 
                     </div>
 

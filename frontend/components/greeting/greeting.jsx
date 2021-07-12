@@ -31,7 +31,7 @@ class Greeting extends React.Component {
 
         {this.props.currentUser ?
           <div className='logout'>
-            <h3>{this.props.currentUser.name}</h3>
+            <h3>Hello {this.props.currentUser.name}!</h3>
             <Link className='logout-lnk' onClick={this.handleClick}>Log Out</Link>
           </div>
           :

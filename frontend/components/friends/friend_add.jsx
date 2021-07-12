@@ -23,10 +23,24 @@ class FriendAdd extends React.Component{
      update(field){
         return e=>this.setState({[field]: e.target.value})
     }
+
+    //  renderErrors() {
+    //     let { currentUser } = this.props
+    //     if (!currentUser) return null
+    //     return (
+    //         <ul>
+    //             {this.props.errors.map((error, i) => {
+    //                 return (<li key={i}>
+    //                     {error}
+    //                 </li>)
+    //             })}
+    //         </ul>
+    //     )
+    // }
     render (){
         return (
         <div>
-        
+        {this.renderErrors}
         <form className='friend-add-form' onSubmit={this.handleSubmit}>
             <h1>Add Friends</h1>
             <div >
@@ -39,6 +53,7 @@ class FriendAdd extends React.Component{
         <button type='submit'>Add Friend</button>
             </div>
         </form>
+
     </div>
         )}
 }
