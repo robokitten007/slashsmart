@@ -72,7 +72,7 @@ class SessionForm extends React.Component {
         
         return (
          <div className='body-container'>
-            <div className="full-form">
+            <div className="full-form" id={form_type}>
                 {/* <div className='login-errors' className={show_loginerror}>
                 {this.renderErrors()}
                 </div> */}

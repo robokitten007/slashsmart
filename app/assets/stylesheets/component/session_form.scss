@@ -6,7 +6,7 @@
     
 
 }
-.full-form {
+#login-form.full-form {
     display:flex;
     flex-flow: column;
     color: #333333;
@@ -17,6 +17,17 @@
     align-items: center;
 }
 
+#signup-form.full-form{
+    #login-form.full-form {
+    display:flex;
+    flex-flow: column;
+    color: #333333;
+    font-family: Lato;
+    font-size: 18px;
+    overflow: auto;
+    align-items: center;
+}
+}
 .login-form{
 
     margin-top: 5%;
