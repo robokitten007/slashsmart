@@ -118,16 +118,16 @@ input{
   top: 2px;
  }
 
- .errors{
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  padding:12px;
-  color: #c45;
-  width: 90%;
-  border-radius: 5px;
-  text-align: center;
- }
+//  .errors{
+//   font-family: 'Montserrat', sans-serif;
+//   font-weight: 600;
+//   font-size: 20px;
+//   padding:12px;
+//   color: #c45;
+//   width: 90%;
+//   border-radius: 5px;
+//   text-align: center;
+//  }
 
  .not-show{
     //  visibility: hidden;
@@ -180,14 +180,14 @@ input{
 
 }
 
-.error li {
-  margin-top: 12px;
-  background:#cc4455;
-  color: #ffffff;
-  padding: 10px;
-  font-size: 18px;
-  font-family: Lato;
-}
+// #login-form.error li {
+//   margin-top: 12px;
+//   background:#cc4455;
+//   color: #ffffff;
+//   padding: 10px;
+//   font-size: 18px;
+//   font-family: Lato;
+// }
 
 #signup-icon {
     float: left;
@@ -202,4 +202,26 @@ input{
 .logoed-form{
     width: 814px;
     margin: 0 auto;
+}
+
+
+#signup-form.show {
+  margin-top: 12px;
+  background:#cc4455;
+  color: #ffffff;
+  padding: 10px;
+  font-size: 18px;
+  font-family: Lato;
+}
+#login-form.show li{
+  margin-top: 12px;
+  background:#cc4455;
+  color: #ffffff;
+  padding: 10px;
+  font-size: 18px;
+  font-family: Lato;
+}
+
+.font-bold{
+   color: #ffffff;
 }

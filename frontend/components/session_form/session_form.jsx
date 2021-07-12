@@ -61,23 +61,21 @@ class SessionForm extends React.Component {
       render() {
         this.props.formType === 'Signup' ? (this.showSignup=true) : (this.showSignup=false) 
         this.props.formType === 'Signup' ? (this.signupForm=true) : (this.signupForm=false)
-        // (this.props.formType === 'Signup' && this.props.errors.length > 0)?(this.signupError=true) : (this.signupError=false)
-        // (this.props.formType === 'Login' && this.props.errors.length > 0)?(this.loginError=true) : (this.loginError=false)
+        this.props.formType === 'Signup' && this.props.errors.length>0 ? (this.signupError=true) : (this.signupError=false)
+        this.props.formType === 'Login'  ? (this.loginError=true) : (this.loginError=false)
 
         const show_flag = this.showFlag ? 'show' : 'not-show'
         const form_type = this.signupForm ? 'signup-form' : 'login-form'
         const show_signup = this.showSignup ? 'show' : 'not-show'
-        // const show_signuperror = this.signupError ? 'show' : 'not-show'
-        // const show_loginerror = this.loginError ? 'show' : 'not-show'
+        const show_signuperror = this.signupError ? 'show' : 'not-show'
+        const show_loginerror = this.loginError ? 'show' : 'not-show'
         
         return (
          <div className='body-container'>
             <div className="full-form" id={form_type}>
-                {/* <div className='login-errors' className={show_loginerror}>
-                {this.renderErrors()}
-                </div> */}
+               
                 <div>
-                                <div className='error'>
+                                <div className='error' id={form_type} className={show_loginerror}>
                                     {this.renderErrors()}
                                 </div>
                 </div>
@@ -90,12 +88,12 @@ class SessionForm extends React.Component {
 
                         <div className={form_type}> 
                             <h4 className="form-title">{this.props.formType === 'Login' ? <p>Log in</p> : <p className='signup-introduction'>INTRODUCE YOURSELF</p>}</h4>
-                            {/* <div className='signup-errors' className={show_signuperror}>
-                                <p className='font-bold'>This is the list of erros:</p>
+                            <div id={form_type} className={show_signuperror}>
+                                <p className='font-bold'>The following error occurs:</p>
                                 <div className='error-list'>
                                     {this.renderErrors()}
                                 </div>
-                            </div> */}
+                            </div>
 
                             <form onSubmit={this.handleSubmit}>
                             {this.props.formType === 'Signup'?
