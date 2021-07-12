@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom';
 const NavBar = (props) => {
     return (
         <div>
-            <header>
+            <header className='nav-bar'>
+            
                 <GreetingContainer />
             </header>
         </div>

@@ -11,15 +11,13 @@ const App = () => {
 
     return(    
     <div>
-    
-    <Switch>
+      <Switch>
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <Route path="/" component={NavBarContainer} />
-   </Switch>
+     </Switch>
     <AuthRoute exact path="/" component={Splash} />
     <AuthRoute  path="/login" component={LoginFormContainer} />
     <ProtectedRoute path="/dashboard" component={DashboardContainer} />
-    
   </div>
     )
 }

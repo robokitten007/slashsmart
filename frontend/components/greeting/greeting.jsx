@@ -7,6 +7,8 @@ class Greeting extends React.Component {
   constructor(props) {
     super(props)
     this.handleClick = this.handleClick.bind(this)
+    this.loggedinFlag = false;
+    
   }
 
   handleClick() {
@@ -14,8 +16,14 @@ class Greeting extends React.Component {
   }
 
   render() {
+    this.props.currentUser ? this.loggedinFlag = true : this.loggedinFlag=false
+    const header_type = this.loggedinFlag ? 'login-header' : 'splash-header' 
+
     return (
-      <div className='greeting'>
+    
+    <div className='greeting-header' id={header_type}>
+
+      <div className='greeting' id={header_type}>
         
       <a href="#">
         <img className='logo' src={window.logo_1} alt="SlashSmart" />
@@ -37,6 +45,7 @@ class Greeting extends React.Component {
             {/* <Link className='signup-lnk'onClick={()=>this.props.history.push('/signup')}>Sign up</Link> */}
           </div>}
       </div>
+    </div>
     )
   }
 }
