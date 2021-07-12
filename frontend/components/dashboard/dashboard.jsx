@@ -24,7 +24,7 @@ class Dashboard extends React.Component {
                         </h1> 
                     <div>
                         <h1>
-                            <a href="#/dashboard" className="fas fa-money-check">
+                            <a href="#/dashboard" className='fas fa-money-check'>
                                 <span className='left-dash-item'>
                                 All expenses
                                 </span>

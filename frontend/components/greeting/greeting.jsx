@@ -31,8 +31,12 @@ class Greeting extends React.Component {
 
         {this.props.currentUser ?
           <div className='logout'>
-            <h3>Hello {this.props.currentUser.name}!</h3>
-            <Link className='logout-lnk' onClick={this.handleClick}>Log Out</Link>
+            <h3>
+             <span className="fas fa-user-circle"> Hello {this.props.currentUser.name}</span> 
+              </h3>
+            <Link className='logout-lnk' onClick={this.handleClick}>
+              <span className='logout-font'>Log Out</span>
+            </Link>
           </div>
           :
           <div className='greeting-links'>
