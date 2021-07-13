@@ -7,10 +7,12 @@
     margin-left: 10%;
     margin-right:10%;
     font-size: 16px;
-    font-family: 'Lato', sans-serif;
-   
-    
+    font-family: 'Lato', sans-serif;    
  }
+#footer {
+  display: block;
+}
+
  .footer-left{
    display: flex;
    flex-direction: column;
