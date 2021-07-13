@@ -1,8 +1,8 @@
 #login-header.greeting-header{
   width: 100%;
   background-color: #1cc29f;
-  // position:fixed;
-  // top: 0;
+  position:fixed;
+  top: 0;
 }
 
 .greeting {
@@ -125,7 +125,7 @@
   border-radius: 5px;
   box-shadow: 0 4px 2px -2px gray;
   padding: 10px 16px 10px 16px;
-  line-height: 1.5px;
+  // line-height: 1.5px;
   text-decoration: none;
   
 }
