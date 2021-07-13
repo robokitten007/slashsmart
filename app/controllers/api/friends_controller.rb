@@ -28,8 +28,7 @@ class Api::FriendsController < ApplicationController
 
                 render :show
              else
-            
-                render json: ["friendship can't be saved"]
+                render json:['friend already exsits'], status: 401
              end 
         end 
         
@@ -42,7 +41,7 @@ class Api::FriendsController < ApplicationController
         if friendship.destroy
             render json: friendship.id
         else
-            render json: ['Friend cannot be deleted'], status: 401
+            render json: ['friend cannot be deleted'], status: 401
         end   
     end
 end

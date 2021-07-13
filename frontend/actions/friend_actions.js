@@ -3,7 +3,7 @@ import * as FriendsUtil from '../util/friend_util';
 export const RECEIVE_FRIENDS = 'RECEIVE_FRIENDS';
 export const RECEIVE_FRIEND = 'RECEIVE_FRIEND';
 export const REMOVE_FRIEND = 'REMOVE_FRIEND';
-export const FRIEND_ERROR = 'FRIEND_ERROR';
+export const FRIEND_ERRORS = 'FRIEND_ERRORS';
 export const CLEAR_FRIEND_ERRORS = 'CLEAR_FRIEND_ERRORS';
 
 
@@ -22,12 +22,12 @@ const removeFriend = (id)=>({
     id
 })
 
-const friendErrors = (error) =>({
-    type: FRIEND_ERROR,
-    error
+const friendErrors = (errors) =>({
+    type: FRIEND_ERRORS,
+    errors
 })
 
-const clearFriendErrors = () =>({
+export const clearFriendErrors = () =>({
     type: CLEAR_FRIEND_ERRORS
 })
 
