@@ -9,6 +9,7 @@
 
 User.destroy_all
 Friend.destroy_all
+Bill.destroy_all
 
 demoUser = User.create!(
     name: 'demoUser',
@@ -56,3 +57,72 @@ Friend.create!(user_id: 5, friend_id: 6)
 Friend.create!(user_id: 6, friend_id: 5)
 Friend.create!(user_id: 3, friend_id: 5)
 Friend.create!(user_id: 5, friend_id: 3)
+
+
+Bill.create!(
+    user_id: 1,
+    friend_id: 2,
+    amount: 1500,
+    amount_paid: 750,
+    description: 'rent',
+    category: 'general',
+    notes: 'July rent',
+    paid_by_user: true
+)
+
+
+Bill.create!(
+    user_id: 1,
+    friend_id: 2,
+    amount: 100,
+    amount_paid: 20,
+    description: 'utility',
+    category: 'general',
+    notes: 'July utility',
+    paid_by_user: true
+)
+
+Bill.create!(
+    user_id: 1,
+    friend_id: 2,
+    amount: 80,
+    amount_paid: 30,
+    description: 'dinner',
+    category: null,
+    notes: null,
+    paid_by_user: false
+)
+
+Bill.create!(
+    user_id: 2,
+    friend_id: 3,
+    amount: 50,
+    amount_paid: 25,
+    description: 'movie',
+    category: null, 
+    notes: null,
+    paid_by_user: false
+)
+
+
+Bill.create!(
+    user_id: 2,
+    friend_id: 1,
+    amount: 250,
+    amount_paid: 120,
+    description: 'gas',
+    category: null,
+    notes: null,
+    paid_by_user: true
+)
+
+Bill.create!(
+    user_id: 2,
+    friend_id: 1,
+    amount: 300,
+    amount_paid: 50,
+    description: 'grocery shopping',
+    category: null,
+    notes: null,
+    paid_by_user: false
+)
