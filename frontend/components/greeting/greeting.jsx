@@ -32,7 +32,7 @@ class Greeting extends React.Component {
         {this.props.currentUser ?
           <div className='logout'>
             <h3>
-             <span className="fas fa-user-circle"> Hello {this.props.currentUser.name}</span> 
+             <span className="fas fa-user-circle"> {this.props.currentUser.name}</span> 
               </h3>
             <Link className='logout-lnk' onClick={this.handleClick}>
               <span className='logout-font'>Log Out</span>

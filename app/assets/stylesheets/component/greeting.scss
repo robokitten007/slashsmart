@@ -1,6 +1,8 @@
 #login-header.greeting-header{
   width: 100%;
   background-color: #1cc29f;
+  // position:fixed;
+  // top: 0;
 }
 
 .greeting {
@@ -8,14 +10,10 @@
     flex-flow: row wrap;
     justify-content: space-between;
     padding: 20px 32px;
-    // width: 80%;
     margin: 0 auto;
-    // margin-left: 5%;
-    // margin-right: 5%;
+   
 }
-#login-header.greeting{
-  width: 80%;
-}
+
 
 
 .greeting-links{
@@ -55,16 +53,12 @@
     
 // }
 
-.logo{
 
-}
 
 .signup-lnk {
   display: flex;
   justify-content: center;
   align-items: center;
-//   margin-top:16px;
-//   margin-bottom:64px;
   cursor: pointer;
   height: 30px;
   width: 100px;
@@ -96,30 +90,21 @@
 
  #login-header.greeting {
   display: flex;
- 
+  width: 80%;
   height: 30px;
   justify-content: space-between;
   background-color: #5BC5A7;
   color: white;
+  padding: 10px;
 }
 
 #login-header.greeting > a {
-  // color: white;
-  // padding: 15px 10px 10px;
+ 
   margin-left: 10px;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 1px;
 }
-.logo{
-  border:red;
-}
-
- #login-header.greeting{
-  display: flex;
-  padding: 10px;
-}
-
 
 .logout-lnk {
   // display: flex;
@@ -131,7 +116,7 @@
   line-height: 14px;
   vertical-align: -5px;
   width: 70px;
-  background-color: orange;
+  background-color: #ff652f;
   font-family: Lato;
   font-weight: 600;
   font-size: 14px;
@@ -142,24 +127,20 @@
   padding: 10px 16px 10px 16px;
   line-height: 1.5px;
   text-decoration: none;
-  // text-align: justify;
   
 }
 
+.logout-lnk:hover {
+  box-shadow: none;
+  position: relative;
+  top: 2px;
+ }
 .signup-lnk:hover {
   box-shadow: none;
   position: relative;
   top: 2px;
  }
 
-// .navbar-right .orange-btn {
-//   border-radius: 5px;
-//   border-width: 1px;
-//   border-style: outset;
-//   display: block;
-//   padding: 5px 10px;
-//   font-size: 14px;
-// }
 
 #login-header.greeting h3 {
   display: block;
@@ -169,7 +150,7 @@
 }
 
 .logout h3{
-  // margin-left: 5px;
+
   font-family: Lato;
   font-size: 14px;
 }
