@@ -89,7 +89,7 @@ class SessionForm extends React.Component {
                         <div className={form_type}> 
                             <h4 className="form-title">{this.props.formType === 'Login' ? <p>Log in</p> : <p className='signup-introduction'>INTRODUCE YOURSELF</p>}</h4>
                             <div id={form_type} className={show_signuperror}>
-                                <p className='font-bold'>The following error occurs:</p>
+                                <p className='font-bold-2'>The following error occurs:</p>
                                 <div className='error-list'>
                                     {this.renderErrors()}
                                 </div>
@@ -119,7 +119,7 @@ class SessionForm extends React.Component {
                             </label> */}
                             {/* <br/>
                             <br/> */}
-                                {this.props.formType === 'Signup' ? <label className='password-label' className={show_flag}><p>And here's my <span className='font-bold'>password:</span></p>
+                                {this.props.formType === 'Signup' ? <label className='password-label' className={show_flag}><p>And here's my <span className='font-bold-1'>password:</span></p>
                                     <input type='password' value={this.state.password} onChange={this.update('password')} />
                                     </label> : 
                                     <label className='password-label'><p>Password:</p>
