@@ -6,9 +6,10 @@ const friendsReducer =(state={}, action) =>{
     let newState = Object.assign({},state)
     switch(action.type){
         case RECEIVE_FRIENDS:
-            return Object.assign({},state, action.friends);
+            // return Object.assign({},state, action.friends);
+            return action.friends
         case RECEIVE_FRIEND:
-            console.log("action = "+JSON.stringify(action));
+            // console.log("action = "+JSON.stringify(action));
             newState[action.friend.id] = action.friend
             return newState
         case REMOVE_FRIEND:
