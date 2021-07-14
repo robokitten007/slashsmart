@@ -8,15 +8,30 @@ class FriendBillItem extends React.Component {
     render(){
         const{currentUser, friend, bill, deleteBill} = this.props
         return( 
-            <p>
-                this is friend bill index item
-            </p>
-            // <li>
-            //     <Link  to={`/dashboard/${friend.id}`} >
-            //      <span>{bill.description}</span>
-            //     </Link>
+            <div>
+                <div className='expense' >
+                    <div className='summary'>
+                        <div className='summary-mainblock'>
+                            <div className='updated-time'>
+                                {bill.updated_at}
+                            </div>
+                            <div className='bill-description'>
+                                {bill.description}
+                            </div>
+                        </div>
+                         <div className='amount'>
+                                {bill.amount}
+                        </div>
+                        <div className='amount-paid'>
+                            {bill.amount_paid}
+                        </div>
 
-            // </li>
+                    </div>
+                
+            
+
+                </div>
+            </div>
         )
     }
 

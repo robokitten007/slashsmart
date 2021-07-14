@@ -1,8 +1,7 @@
 
-export const searchUser =(email)=> (
+export const fetchUsers =()=> (
     $.ajax({
         mehtod: 'get',
-        url: 'api/users',
-        data: {email}
+        url: 'api/users'
     })
 )

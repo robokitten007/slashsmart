@@ -3,29 +3,22 @@ import FriendBillsIndex from './friend_bills_index';
 import { fetchBills, fetchBill,deleteBill } from '../../../actions/bill_actions';
 
 const mSTP=(state, ownProps) =>{
-    // let bills = Object.values(state.entities.bills)
-    // let currentUser = state.entities.users[state.session.id]
-    // let billIds = []
-    // console.log('inside friend bills container')
-    // if(bills.length >0){
-    //   bills.forEach((bill)=>{
-    //     if(bill.user_id === currentUser.id && bill.friend_id === parseInt(ownProps.match.params.userId) ||
-    //     (bill.user_id === parseInt(ownProps.match.params.userId) && bill.friend_id === currentUser.id)
-    //     ){
-    //       console.log('bill.id:' + bill.id)
-    //       billIds.push(bill.id)
-    //     }
-    //   })
-    // }
+    let friend
+    let friendships = Object.values(state.entities.friends)
+    if (friendships.length > 0){
+        friendships.forEach((friendship) =>{
+
+            if (friendship.friend_id === parseInt(ownProps.match.params.userId)) {                
+                friend = friendship
+            }
+        })
+    }
     return ({
       currentUser: state.entities.users[state.session.id],
-      friend: state.entities.users[ownProps.match.params.userId],
-      bills: Object.values(state.entities.bills)
-      // billIds: billIds
+      friend: friend,
+      bills: Object.values(state.entities.bills)  
     })
 
-    // currentUser: state.entities.users[state.session.id],
-    // bills: Object.values(state.entities.bills)
 }
 
 

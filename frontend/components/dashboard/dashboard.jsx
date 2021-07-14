@@ -48,7 +48,7 @@ class Dashboard extends React.Component {
                 </div>
                 <div className='content-container'>
                     <div className='mid-dash'>
-                        <h1>this is the mid-dash</h1>
+                        {/* <h1>this is the mid-dash</h1> */}
 
                         <Switch>
                             <Route exact path='/dashboard/:userId' component={FriendBillsContainer} />
