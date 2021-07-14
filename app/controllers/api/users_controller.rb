@@ -10,6 +10,14 @@ class Api::UsersController < ApplicationController
     end
   end
 
+
+  def index
+    @users = User.all
+    render json: index
+  end 
+
+
+
   protected
 
   def user_params

@@ -47,6 +47,8 @@ Lucy = User.create!(
 
 )
 
+
+
 Friend.create!(user_id: 1, friend_id: 2)
 Friend.create!(user_id: 2, friend_id: 1)
 Friend.create!(user_id: 1, friend_id: 3)
@@ -88,19 +90,19 @@ Bill.create!(
     amount: 80,
     amount_paid: 30,
     description: 'dinner',
-    category: null,
-    notes: null,
+    category: 'general',
+    notes:'general',
     paid_by_user: false
 )
 
 Bill.create!(
-    user_id: 2,
+    user_id: 1,
     friend_id: 3,
     amount: 50,
     amount_paid: 25,
     description: 'movie',
-    category: null, 
-    notes: null,
+    category: 'general',
+    notes:'general',
     paid_by_user: false
 )
 
@@ -111,8 +113,8 @@ Bill.create!(
     amount: 250,
     amount_paid: 120,
     description: 'gas',
-    category: null,
-    notes: null,
+    category:'general',
+    notes:'general',
     paid_by_user: true
 )
 
@@ -122,7 +124,8 @@ Bill.create!(
     amount: 300,
     amount_paid: 50,
     description: 'grocery shopping',
-    category: null,
-    notes: null,
+    category: 'general',
+    notes:'general',
     paid_by_user: false
 )
+

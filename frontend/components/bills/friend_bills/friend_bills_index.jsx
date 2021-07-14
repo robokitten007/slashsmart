@@ -1,5 +1,5 @@
 import React from 'react';
-import FriendBillItem from './friend_bills_item';
+// import FriendBillItem from './friend_bills_item';
 
 import { Link } from 'react-router-dom';
 
@@ -14,32 +14,32 @@ class FriendBillsIndex extends React.Component {
         this.props.fetchBills();
     }
 
+    // getFriendBills(){
+
+    // }
     render(){
         const {currentUser, friend, bills, deleteBill} = this.props
-        // if(!currentUser || !friend) return null;
-
+        console.log(friend)
         return(
+        
             <div>
-                this is friend bills index
+                    <p>this is friend bills index</p>
+            {/* <div>
+                <h2>{friend.name}</h2>
+                <button >Add Expense</button>
+            </div> */}
+            {/* <ul>
+                {bills.map((bill)=>(
+                    <FriendBillItem
+                        key={bill.id}
+                        currentUser={currentUser}
+                        friend={friend}
+                        bill={bill}
+                        deleteBill={deleteBill}
+                        />
+                ))}
+            </ul> */}
             </div>
-            // <div>
-
-            // <div>
-            //     <h2>{friend.name}</h2>
-            //     <button >Add Expense</button>
-            // </div>
-            // <ul>
-            //     {bills.map((bill)=>(
-            //         <FriendBillItem
-            //             key={bill.id}
-            //             currentUser={currentUser}
-            //             friend={friend}
-            //             bill={bill}
-            //             deleteBill={deleteBill}
-            //             />
-            //     ))}
-            // </ul>
-            // </div>
         )
     }
 

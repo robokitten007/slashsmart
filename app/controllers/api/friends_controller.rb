@@ -1,5 +1,8 @@
 class Api::FriendsController < ApplicationController
 
+    
+
+    
     def index
         @user_id = current_user.id
         #array of friendship instances from Friend

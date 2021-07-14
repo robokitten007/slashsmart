@@ -2,13 +2,13 @@ class Api::BillsController < ApplicationController
 
     # list all bills under a friend
     def index
-
-        # @user = current_user
-        # @bills = user.bills_created + user.bills_created
-       @user_id = current_user.id;
-       @bills = Bills.all.where(user_id: @user_id, friend_id: params[:id])
-
+    
+        @user = current_user
+        #all bills related to the current user
+        @bills = @user.bills_created + @user.bills_received
+      
         render :index
+
     end 
 
 
@@ -23,7 +23,7 @@ class Api::BillsController < ApplicationController
         if @bill.update(bill_params)
             render :show
         else 
-            render :json: bill.errors.full_messages, status: 401
+            render json: bill.errors.full_messages, status: 401
         end 
         
     end
