@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import FriendsIndexContainer from '../friends/friends_index_container';
 import FriendAddContainer from '../friends/freind_add_container';
 import FriendRemoveContainer from '../friends/friend_remove_container';
-
+import FriendBillsContainer from '../bills/friend_bills/friend_bills_container';
 class Dashboard extends React.Component {
     constructor(props) {
         super(props)
@@ -49,7 +49,7 @@ class Dashboard extends React.Component {
                 <div className='content-container'>
                     <div className='mid-dash'>
                         <h1>this is the mid-dash</h1>
-
+                        {/* <FriendBillsContainer/> */}
                     </div>
 
                     <div className='right-dash'>

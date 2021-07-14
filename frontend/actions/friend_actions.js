@@ -1,4 +1,4 @@
-import * as FriendsUtil from '../util/friend_util';
+import * as FriendsUtil from '../util/friend_api_util';
 
 export const RECEIVE_FRIENDS = 'RECEIVE_FRIENDS';
 export const RECEIVE_FRIEND = 'RECEIVE_FRIEND';

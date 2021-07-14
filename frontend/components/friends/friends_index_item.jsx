@@ -9,9 +9,7 @@ class FriendsIndexItem extends React.Component{
 
     render (){
         const {currentUser, friendship, deleteFriend} = this.props
-        return (
-           <li>
-            
+        return( <li>
                <Link  to={`/dashboard/${friendship.friend_id}`} className="fas fa-user">
                  <span className='friend-index-item'>{friendship.friend}</span>
                    </Link>
