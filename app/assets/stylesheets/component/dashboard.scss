@@ -30,6 +30,8 @@
   
 }
 .left-dash-item{
+  padding: 0 0;
+  line-height: 24px;
   font-family: Lato;
   font-size:16px;
   margin-left: 8px;
@@ -180,7 +182,8 @@ input::placeholder {
 }
 
 .content-container {
-  width: 80%;
+  // width: 80%;
+  width: 800px;
   display: flex;
   justify-content: space-between;
   // align-items: baseline;
@@ -194,7 +197,7 @@ input::placeholder {
   margin: 0 10px;
   box-shadow:
   0 0 15px rgba(0,0,0,0.2);
-  height:800px;
+  height:calc(100vh);
 }
 
 .mid-dadsh > ul {
@@ -202,6 +205,7 @@ input::placeholder {
 }
 
 .right-dash {
+  margin-left: 0;
   padding: 10px;
 }
 
