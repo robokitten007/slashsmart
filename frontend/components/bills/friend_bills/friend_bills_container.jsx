@@ -1,6 +1,9 @@
+import React from 'react';
 import { connect } from 'react-redux';
 import FriendBillsIndex from './friend_bills_index';
 import { fetchBills, fetchBill,deleteBill } from '../../../actions/bill_actions';
+import { openModal, closeModal } from '../../../actions/modal_actions';
+
 
 const mSTP=(state, ownProps) =>{
     let friend
@@ -25,7 +28,13 @@ const mSTP=(state, ownProps) =>{
 const mDTP = dispatch =>({
   fetchBills: ()=>dispatch(fetchBills()),
   fetchBill: (id)=>dispatch(fetchBill(id)),
-  deleteBill: (id)=>dispatch(deleteBill(id))
+  deleteBill: (id)=>dispatch(deleteBill(id)),
+  createBillForm: (
+      <button className='create-bill-btn' onClick={() => dispatch(openModal('Create Bill'))}>
+        Add expense
+      </button>
+    ),
+  closeModal: () => dispatch(closeModal()),
 })
 
 

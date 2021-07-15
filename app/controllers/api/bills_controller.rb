@@ -1,6 +1,6 @@
 class Api::BillsController < ApplicationController
 
-    # list all bills under a friend
+    # list all bills
     def index
     
         @user = current_user
@@ -12,10 +12,17 @@ class Api::BillsController < ApplicationController
     end 
 
 
-#     # def create
-#     #     user_id = current_user.id
-#     #     friend_id = params[:bill][:friend_id]
-#     # end 
+    def create
+        user_id = current_user.id
+        friend_id= params[:bill][:friend_id]
+        @bill = Bill.new(bill_params)
+        
+        if @bill.save
+            render :show
+        else
+            render json: @bill.errors.full_messages, status: 401
+        end
+    end
 
     
     def update
@@ -27,6 +34,7 @@ class Api::BillsController < ApplicationController
         end 
         
     end
+
         
     def show
         @bill = Bill.find_by(id: params[:id])
@@ -47,7 +55,7 @@ class Api::BillsController < ApplicationController
     protected
 
     def bill_params
-    params.require(:bill).permit(:user_id, :friend_id, :description, :amount, :amount_paid, :category, :notes)
+    params.require(:bill).permit(:user_id, :friend_id, :description, :amount, :amount_paid, :paid_by_user, :category, :notes)
     
     end 
 

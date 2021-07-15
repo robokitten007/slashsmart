@@ -8,6 +8,7 @@ class FriendBillsIndex extends React.Component {
     constructor(props){
         super(props);
         this.fetchFriendBills = this.fetchFriendBills.bind(this)
+        
     }
 
     componentDidMount(){
@@ -41,7 +42,10 @@ class FriendBillsIndex extends React.Component {
                 
             <div className='topbar-friend'>
                 <h2>{friend.friend}</h2>
-                <button >Add Expense</button>
+                {/* <button onClick ={this.handleClick}>Add Expense</button> */}
+                <div>
+                    {this.props.createBillForm}
+                </div>
             </div>
             <div className='expense-list'>
                 {this.fetchFriendBills().length === 0 ? (
@@ -54,7 +58,7 @@ class FriendBillsIndex extends React.Component {
                     key={bill.id}
                     deleteBill={deleteBill}
                     currentUser={currentUser}
-                    fetchBill={deleteBill}
+                    fetchBill={fetchBill}
                     bill={bill}
                 />
                 ))
