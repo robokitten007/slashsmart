@@ -39,8 +39,8 @@ class Dashboard extends React.Component {
                         <FriendsIndexContainer />
                         <FriendAddContainer />
                         <div className='personal-links'>
-                            <a href="https://www.linkedin.com/" target="_blank" className='fab fa-github fa-2x'></a>
-                            <a href="https://github.com/robokitten007" target="_blank" className='fab fa-linkedin fa-2x'></a>
+                            <a href="https://github.com/robokitten007" target="_blank" className='fab fa-github fa-2x'></a>
+                            <a href="https://www.linkedin.com/" target="_blank" className='fab fa-linkedin fa-2x'></a>
                         </div>
                    
                     </div>
