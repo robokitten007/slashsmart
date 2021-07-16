@@ -29,7 +29,8 @@ class FriendBillItem extends React.Component {
     //    debugger
         const { bill, currentUser } = this.props
         if (bill.user_id === currentUser.id && bill.paid_by_user) {
-            return 'You paid'
+            return 'You paid' 
+    
         } else if (bill.user_id === currentUser.id && !bill.paid_by_user) {
             return `${bill.partner} paid`
         } else if (bill.user_id !== currentUser.id && bill.paid_by_user) {
@@ -100,7 +101,7 @@ class FriendBillItem extends React.Component {
                     <span className='bill-right'>
                         <div className='bill-payer'>
                             <p className='bill-payer-name'>{this.payer()}</p>  
-                            <p className='bill-payer-amount'>${(this.props.bill.amount).toFixed(2)}</p>
+                            <p className='bill-payer-amount'>${(this.props.bill.amount_paid).toFixed(2)}</p>
                         </div>
                         <div className='bill-payee'>
                             <p className='bill-payer-name'>{this.payee()}</p> 
