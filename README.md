@@ -1,24 +1,49 @@
-# README
+# Slashsmart
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ Slashsmart is built as a simple clone of the website Splitwise, where friends can keep track of and manage their shared expenses.
+ 
+ [Live Link](https://slashsmart.herokuapp.com/#/)
+ 
+ # Key Technologies
+ ## Backend
+ - PostgresSQL
+ - Ruby on Rails
+ ## Frontend
+ - React
+ - Redux
+ ## Key Features
+ - Full user auth cycle(sign up, login, logout)
+ - Add exisiting user as friend
+ - Display expenses shared with friends
+ - Create new expenses shared with friends
+ - Delete an expense shared with friend
+ 
+  #### Signup:
+ 
+ 
+ 
+ 
+![signup](https://github.com/robokitten007/slashsmart/blob/main/app/assets/images/signup1.png) 
+![signup](https://github.com/robokitten007/slashsmart/blob/main/app/assets/images/signup2.png)
 
-Things you may want to cover:
+ #### Login:
 
-* Ruby version
 
-* System dependencies
+![login](https://github.com/robokitten007/slashsmart/blob/main/app/assets/images/login.png)
 
-* Configuration
+#### Add a registered user as friend:
 
-* Database creation
+![add](https://github.com/robokitten007/slashsmart/blob/main/app/assets/images/add_friend.png)
 
-* Database initialization
+#### diplay all bills shared with a friend:
+![friend_bill](https://github.com/robokitten007/slashsmart/blob/16629e96065fccd50d575c51f7348226c8274a52/app/assets/images/friend_bills.png)
+#### create a new bill with a friend
+![add_bill](https://github.com/robokitten007/slashsmart/blob/main/app/assets/images/add_bill.png)
+#### delete an exsiting bill
+![delete_bill](https://github.com/robokitten007/slashsmart/blob/main/app/assets/images/delete_bill.png)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+
+
