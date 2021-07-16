@@ -13,43 +13,44 @@ class FriendBillItem extends React.Component {
 
     color() {
         const { bill, currentUser } = this.props
-        if (bill.user_id === currentUser.id && bill.paid_by_user === 'true') {
+        if (bill.user_id === currentUser.id && bill.paid_by_user) {
             return 'bill-green'
-        } else if (bill.user_id === currentUser.id && bill.paid_by_user === 'false') {
+        } else if (bill.user_id === currentUser.id && !bill.paid_by_user) {
             return 'bill-red'
-        } else if (bill.user_id !== currentUser.id && bill.paid_by_user === 'true') {
+        } else if (bill.user_id !== currentUser.id && bill.paid_by_user) {
             return 'bill-red'
-        } else if (bill.user_id !== currentUser.id && bill.paid_by_user === 'false') {
+        } else if (bill.user_id !== currentUser.id && !bill.paid_by_user) {
             return 'bill-green'
         }
+
     }
 
    payer() {
     //    debugger
         const { bill, currentUser } = this.props
-        if (bill.user_id === currentUser.id && bill.paid_by_user === 'true') {
+        if (bill.user_id === currentUser.id && bill.paid_by_user) {
             return 'You paid'
-        } else if (bill.user_id === currentUser.id && bill.paid_by_user === 'false') {
+        } else if (bill.user_id === currentUser.id && !bill.paid_by_user) {
             return `${bill.partner} paid`
-        } else if (bill.user_id !== currentUser.id && bill.paid_by_user === 'true') {
+        } else if (bill.user_id !== currentUser.id && bill.paid_by_user) {
             return `${bill.author} paid`
-        } else if (bill.user_id !== currentUser.id && bill.paid_by_user === 'false') {
+        } else if (bill.user_id !== currentUser.id && !bill.paid_by_user) {
             return 'You paid'
         }
+
+        // return 'test'
     }
 
       payee() {
         const { bill, currentUser } = this.props
-        if (bill.user_id === currentUser.id && bill.paid_by_user === true) {
+        if (bill.user_id === currentUser.id && bill.paid_by_user) {
             return `You lent ${bill.partner}`
-        } else if (bill.user_id === currentUser.id && bill.paid_by_user === false) {
+        } else if (bill.user_id === currentUser.id && !bill.paid_by_user) {
             return `${bill.partner} lent you`
-        } else if (bill.user_id !== currentUser.id && bill.paid_by_user === true) {
+        } else if (bill.user_id !== currentUser.id && bill.paid_by_user) {
             return `${bill.author} lent you`
-        } else if (bill.user_id !== currentUser.id && bill.paid_by_user === false) {
+        } else if (bill.user_id !== currentUser.id && !bill.paid_by_user) {
             return `You lent ${bill.author}`
-        } else {
-            return "No workee"
         }
     }
 
@@ -103,10 +104,12 @@ class FriendBillItem extends React.Component {
                         </div>
                         <div className='bill-payee'>
                             <p className='bill-payer-name'>{this.payee()}</p> 
-                            <p className={this.color()} >${(this.props.bill.amount_paid).toFixed(2)}</p>
+                            {/* <p className={this.color()} >${(this.props.bill.amount_paid).toFixed(2)}</p> */}
+                            <p className={this.color()} >${(this.props.bill.amount_paid-(this.props.bill.amount)/2).toFixed(2)}</p>
                         </div>
                         <div className='delete-bill'>
-                            <div onClick={()=>deleteBill(bill.id)} id="close-x">X</div>
+                            {<div onClick={()=>deleteBill(bill.id)} id="close-x">X</div>}
+                            <div onClick={this.handleClick}></div>
                         </div>
                     </span>
                 </div>

@@ -25,7 +25,7 @@ const mSTP = (state, ownProps) => {
                 amount: 0,
                 amount_paid: 0,
                 description: '',
-                category: 'general',
+                category: 'General',
                 notes:'',
                 paid_by_user: 'true'
 
@@ -37,13 +37,8 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => ({
     processForm: (bill) => dispatch(createBill(bill)),
-    //  otherForm: (
-    //   <button onClick={() => dispatch(openModal('create bill'))}>
-    //       signup
-    //   </button>
-    // ),
-      closeModal: () => dispatch(closeModal())
+  
+    closeModal: () => dispatch(closeModal())
 })
 
-export default withRouter(connect(mSTP, mDTP)(BillForm))
-// export default 
+export default withRouter(connect(mSTP, mDTP)(BillForm)) 

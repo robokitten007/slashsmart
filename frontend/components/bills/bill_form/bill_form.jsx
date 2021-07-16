@@ -49,16 +49,16 @@ class BillForm extends React.Component {
         return (
 
         
-        <div className="addex-form">
-        <form onSubmit={this.handleSubmit} className="addex-form">
+        <div className="add-bill-form">
+        <form onSubmit={this.handleSubmit} className="add-bill-form">
           
-              <div className="addex-head">
+              <div className="add-bill-head">
                 <span>Add an expense</span>
                 <div onClick={this.props.closeModal} className="close-x">X</div>
               </div>
         
-          <div className='addex-friends'>
-                <div className='friends-wrd'>
+          <div className='add-bill-friends'>
+                <div className='friend-name'>
                 With
                 <span id='font-bold'> you </span>
                 and: 
@@ -68,15 +68,27 @@ class BillForm extends React.Component {
           
           </div>
 
-          <div className='addex-details-1'>
+          <div className='add-bill-details-1'>
             
                 <div className='details-1-left'>
+                    
+                    <div className='category'>
+                        <label> Category
+                            <input type="text"
+                                placeholder = 'General'
+                                name='category'
+                                value={this.state.category}
+                                onChange={this.update('category')}
+                                    />
+                        </label>
+                    </div>
+
                     <label for='paidby' className='details-2-top'>
                     Paid by:
                     </label>
           
 
-                    <div className='addex-paidby'>
+                    <div className='add-bill-paidby'>
                       <select name='paidby'
                               className='paidby' 
                               onChange={this.update('paid_by_user')} 
@@ -88,30 +100,17 @@ class BillForm extends React.Component {
                         </option>
                       </select>
                     </div>
-                    
-                    <div className='categories-list'>
-                        <label> Category
-                            <input type="text"
-                                placeholder = 'General'
-                                name='category'
-                                value={this.state.category}
-                                onChange={this.update('category')}
-                                    />
-                        </label>
-                    </div>
-
-                {/* <img src={window.category_icon} alt="" className='category-icon-medium'/> */}
                 
                 </div>
 
             <div className='details-1-right'>
 
-                <div className='addex-desc-amt'>
+                <div className='add-bill-desc-amt'>
                     <span>Enter a description:</span>
                     <input type="text"
                     value={this.state.description}
                     onChange={this.update('description')}
-                    className="addex-desc"
+                    className="add-bill-desc"
                     />
                     <br/>
                     <br/>
@@ -119,7 +118,7 @@ class BillForm extends React.Component {
                     <input type="number"
                     value={this.state.amount}
                     onChange={this.update('amount')}
-                    className="addex-amt"
+                    className="add-bill-amt"
                     />
                     <br/>
                     <br/>
@@ -128,27 +127,27 @@ class BillForm extends React.Component {
                     <input type="number"
                     value={this.state.amount_paid}
                     onChange={this.update('amount_paid')}
-                    className="addex-amt"
+                    className="add-bill-amt"
                     />
                 </div>
             </div>
 
           </div>
 
-          <div className='addex-details-2'>
+          <div className='add-bill-details-2'>
             <div className='details-2-bottom'>
               Notes:
               <br/>
               <textarea
                 value={this.state.notes}
                 onChange={this.update('notes')}
-                className="addex-notes"
+                className="add-bill-notes"
                 />
             </div>
 
           </div>
 
-          <div className="addex-buttons">
+          <div className="add-bill-buttons">
             {/* <input className="btn-cancel" type="submit" value="Cancel" /> */}
            <input className="btn-save" type="submit" value="Save" /> 
           <button className='btn-cancel' onClick={this.props.closeModal}>Cancel</button>

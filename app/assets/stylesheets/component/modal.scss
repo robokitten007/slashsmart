@@ -23,11 +23,11 @@
 
 }
 
-.addex-form {
+.add-bill-form {
   background-color: white;
 }
 
-.addex-head {
+.add-bill-head {
   background-color: #5bc5a7;
   color: white;
   font-family: Lato;
@@ -41,7 +41,7 @@
   
 }
 
-.addex-friends {
+.add-bill-friends {
   display:flex;
   border-bottom: 1px solid lightgray;
   position: relative;
@@ -53,44 +53,12 @@
   padding-top: 5px
 }
 
-.category-icon-medium {
-  width: 64px;
-}
-
-.ae-friend-search {
-  background-color: #f6f6f6;
-  border: 0.5px solid #cccccc;
-  margin-left: 3px;
-  width: 120px;
-  margin-right: 12px;
-}
-
-// .dont-show-friends-list {
-//   visibility: hidden;
-// }
-
-// .show-friends-list {
-//   background-color: white;
-//   color: #373B3F;
-//   position: absolute;
-//   z-index: 9;
-//   height: 50px;
-//   font-family: Lato;
-// }
-
-.ae-friend {
-  cursor: pointer;
-  // border: 1px solid blue;
-}
-
-.addex-details-1 {
-  // border: 1px solid blue;
+.add-bill-details-1 {
   display:flex;
   flex-direction: row;
   font-family: Lato;
   font-size: 14px;
   margin-bottom: 20px;
-  // justify-content: space-between;
   padding-right: 10px;
 }
 
@@ -98,7 +66,6 @@
   display:flex;
   flex-direction: column;
   justify-content: flex-end;
-  // border: 1px solid red;
   padding-left: 10px;
   
 }
@@ -109,27 +76,21 @@
 }
 
 .details-1-right {
-  // border: 1px solid green;
   padding-left: 25px;
 }
 
-.categories-selector{
-  width: 90px;
-  margin-left: 17px;
-  border: 0.5px solid #cccccc;
-}
 
-.addex-desc, .addex-amt {
+.add-bill-desc, .add-bill-amt {
   margin-top:3px;
   border: 0.5px solid #cccccc;
   height: 23px;
 }
 
-.addex-desc-amt {
+.add-bill-desc-amt {
   margin-top: 20px;
 }
 
-.addex-details-2 {
+.add-bill-details-2 {
   display: flex;
   // align-items: center;
   padding-left: 10px;
@@ -141,11 +102,6 @@
 
 .details-2-top {
   display: flex;
-}
-
-.paidby-selector {
-  margin-left: 3px;
-  margin-right: 3px;
 }
 
 select.paidby {
@@ -160,31 +116,21 @@ select.paidby {
  margin-bottom: 10px
 }
 
-.addex-notes {
+.add-bill-notes {
   border: 0.5 solid #cccccc;
   width: 335px;
 }
 
-.addex-buttons {
+.add-bill-buttons {
   border-top: 0.5px solid #cccccc;
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: flex-end;
-  // align-items: flex-start
   padding-top: 20px;
   margin-top: 10px;
   padding-right: 10px;
 }
 
 .btn-save {
-  // background-color: #cccccc;
-  // color: #ffffff;
-  // margin-left: 3px;
-  // border: 1px solid #cccccc;
+  
   font-size: 14px;
-  // height: 30px;
-  // height: 20px;
-  // margin-right: 5px;
   width: auto;
   display: inline;
   font: 400 13.3333px Arial;
@@ -199,11 +145,11 @@ select.paidby {
   margin-bottom: 20px;
 }
 
-.friends-wrd {
+.friend-name {
   margin-right: 5px;
 }
 
-.categories-list input {
+.category input {
   border: 0.5px solid #cccccc;
   height: 23px;
 }
