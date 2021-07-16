@@ -82,9 +82,9 @@ class FriendBillItem extends React.Component {
       handleClick(e) {
         e.preventDefault();
         e.stopPropagation();
-        const { bill, deleteBill } = this.props
-        if (confirm("Are you sure you want to delete this bill?")) {
-            deleteBill(bill.id)
+        const { bill } = this.props
+        if (confirm("Are you sure you want to delete this bill? This will completely remove this bill from ALL people invovled.")) {
+            this.props.deleteBill(bill.id)
         }
     }    
 
@@ -104,12 +104,12 @@ class FriendBillItem extends React.Component {
                         </div>
                         <div className='bill-payee'>
                             <p className='bill-payer-name'>{this.payee()}</p> 
-                            {/* <p className={this.color()} >${(this.props.bill.amount_paid).toFixed(2)}</p> */}
+                    
                             <p className={this.color()} >${(this.props.bill.amount_paid-(this.props.bill.amount)/2).toFixed(2)}</p>
                         </div>
                         <div className='delete-bill'>
-                            {<div onClick={()=>deleteBill(bill.id)} id="close-x">X</div>}
-                            <div onClick={this.handleClick}></div>
+                            {/* {<div onClick={()=>deleteBill(bill.id)} id="close-x">X</div>} */}
+                            <div id="close-x" onClick={this.handleClick}>x</div>
                         </div>
                     </span>
                 </div>
