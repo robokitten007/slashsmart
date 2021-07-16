@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import FriendBillsIndex from './friend_bills_index';
 import { fetchBills, fetchBill,deleteBill } from '../../../actions/bill_actions';
 import { openModal, closeModal } from '../../../actions/modal_actions';
+import { withRouter } from 'react-router-dom';
 
 
 const mSTP=(state, ownProps) =>{
@@ -31,7 +32,12 @@ const mDTP = dispatch =>({
   deleteBill: (id)=>dispatch(deleteBill(id)),
   createBillForm: (
       <button className='create-bill-btn' onClick={() => dispatch(openModal('Create Bill'))}>
-        Add expense
+        Add an expense
+      </button>
+    ),
+    updateBillForm: (
+      <button className='update-bill-btn' onClick={() => dispatch(openModal('Update Bill'))}>
+        Edit an expense
       </button>
     ),
   closeModal: () => dispatch(closeModal()),

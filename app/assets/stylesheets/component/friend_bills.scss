@@ -1,20 +1,203 @@
 .topbar-friend{
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between; 
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color:rgb(221,221,221);
+    padding-top: 10px;
+    padding-bottom: 15px;
+    background-color: rgb(221,221,221)
+
 }
-.topbar-friend h2{
+.topbar-friend span{
     font-family: Lato;
     font-size: 24px;
     font-weight: 700;
     text-decoration: none;
     color: black;
+    margin-left: 20px;
+    background-color: rgb(221,221,221);
+}
+
+#empty{
+    font-size: 28px;
+    font-family: Lato;
+    color: rgb(51,51,51);
+    display: inline-block;
+
+}
+#no-transaction{
+    float: left;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.expense-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.expense{
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color:rgb(221,221,221);
+    cursor: pointer;
 }
 .summary{
     display: flex;
-
+    justify-content: space-between;
 }
 
 .summary-mainblock{
     display: flex;
 }
+
+.create-bill-btn{
+  text-align: center;
+  line-height: normal;
+  vertical-align: -5px;
+  width: auto;
+  background-color: #ff652f;
+  font-family: Lato;
+  font-weight: 600;
+  font-size: 15px;
+  color: white;
+  border: 0px;
+  border-radius: 4px;
+  box-shadow: 0 4px 2px -2px gray;
+  padding: 9px 14px;
+  margin-right: 20px;
+  align-items: center;
+
+}
+
+#close-x{
+    cursor: pointer;
+}
+
+.bill-index-item {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    justify-content: space-between;
+    padding: 10px 0 10px 0;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #333333;
+    min-height: 32px;
+    align-items: center;
+}
+
+.bill-left > p, .bill-right > p {
+    margin-left: 30px;
+}
+
+.bill-left {
+    display: flex;
+    align-items: center;
+}
+
+.bill-left > p {
+    font-weight: 700;
+    font-size: 20px;
+    font-family: Lato;
+    color: black
+}
+
+
+
+.bill-right {
+    display: flex;
+    justify-content: center;
+}
+
+.bill-right > div > p {
+    justify-content: center;
+    margin-right: 30px;
+    width: 150px;
+}
+
+.bill-payer, .bill-payee {
+    display: block;
+    text-align: center;
+    justify-content: center;
+}
+
+.bill-payer-name {
+    color: #a8a7a7;
+    // color: black;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.bill-payer-amount {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.bill-green {
+    color: rgb(36, 160, 36);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.bill-red {
+    color: #ff652f;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.friend-bill-date {
+    display: block;
+    text-align: center;
+    width: 50px;
+    color: #a8a7a7;
+}
+
+.friend-bill-month {
+    font-size: 10px;
+}
+
+.bill-day {
+    font-size: 20px;
+}
+
+.delete-bill {
+    margin-right: 20px;
+    align-items: center;
+    display: flex;
+    color: white;
+}
+
+.bill-index-item:hover > span > .delete-bill {
+    color: red;
+}
+
+.bill-index-item:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.deleteBill:hover {
+    cursor: pointer;
+    border-bottom: 3px solid #ff652f;
+    border-top: 3px solid rgb(235, 235, 235);
+}
+
+
+
+
+.bill-index-item:hover > span > .details > button {
+    color: white;
+    cursor: pointer;
+    background-color: #ff652f;
+}
+
+.bill-index-item:hover > span > .details {
+    border-color: #c75b34;
+    background-color: #ff652f;
+}
+
+
+
 

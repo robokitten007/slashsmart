@@ -41,17 +41,25 @@ class FriendBillsIndex extends React.Component {
         <div>
                 
             <div className='topbar-friend'>
-                <h2>{friend.friend}</h2>
+                <div>
+                    <span>{friend.friend}</span>
+                </div>
+                    
                 {/* <button onClick ={this.handleClick}>Add Expense</button> */}
                 <div>
                     {this.props.createBillForm}
                 </div>
             </div>
             <div className='expense-list'>
+                <ul>
                 {this.fetchFriendBills().length === 0 ? (
-                <p className="no-bills">
+                    <div>
+                <p id="empty">
+                        <img id='no-transaction'src={window.no_transaction} alt="empty" />
                 {`You dont have any transactions with ${friend.friend}!`}
-                </p>) : 
+                </p>
+                    </div>)
+               : 
                 (
                 this.fetchFriendBills().map((bill) => (
                 <FriendBillItem
@@ -60,9 +68,11 @@ class FriendBillsIndex extends React.Component {
                     currentUser={currentUser}
                     fetchBill={fetchBill}
                     bill={bill}
+                    // updateBillFrom={this.props.updateBillFrom}
                 />
                 ))
             )}
+            </ul>
             </div>
         </div>
         )    

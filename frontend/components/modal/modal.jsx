@@ -1,8 +1,8 @@
 import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
-import {createBillContainer} from '../../components/bills/bill_form/create_bill_container'
-import {updateBillContainer} from '../../components/bills/bill_form/edit_bill_container'
+import CreateBillContainer from '../bills/bill_form/create_bill_container'
+import UpdateBillContainer from '../bills/bill_form/update_bill_container'
 function Modal({modal, closeModal}) {
   if (!modal) {
     return null;
@@ -10,10 +10,10 @@ function Modal({modal, closeModal}) {
   let component;
   switch (modal) {
     case 'Create Bill':
-      component = <createBillContainer />;
+      component = <CreateBillContainer />;
       break;
     case 'Update Bill':
-      component = <updateBillContainer />;
+      component = <UpdateBillContainer />;
       break;
     default:
       return null;

@@ -33,7 +33,7 @@ export const updateBill =(bill)=>(
 
     export const deleteBill =(id)=>(
     $.ajax({
-        method: 'patch',
+        method: 'delete',
         url: `api/bills/${id}`,
         data:{id}
     }))
