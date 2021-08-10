@@ -26,7 +26,7 @@ class Greeting extends React.Component {
       <div className='greeting' id={header_type}>
         
       <a href="#">
-        <img className='logo' src={window.logo_1} alt="SlashSmart" />
+        <img className='logo' src={window.smart_slash} alt="SlashSmart" />
       </a>
 
         {this.props.currentUser ?
