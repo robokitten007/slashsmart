@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { createBill } from '../../../actions/bill_actions'
-import BillForm from './bill_form';
+import CreateBillForm from './create_bill_form';
 import { withRouter } from 'react-router-dom';
 import { openModal, closeModal } from '../../../actions/modal_actions'
 
@@ -41,4 +41,4 @@ const mDTP = dispatch => ({
     closeModal: () => dispatch(closeModal())
 })
 
-export default withRouter(connect(mSTP, mDTP)(BillForm)) 
+export default withRouter(connect(mSTP, mDTP)(CreateBillForm)) 

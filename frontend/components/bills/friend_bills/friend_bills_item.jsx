@@ -103,7 +103,6 @@ class FriendBillItem extends React.Component {
                             <p className='bill-payer-name'>{this.payer()}</p>  
                             {/* <p className='bill-payer-amount'>${(this.props.bill.amount_paid).toFixed(2)}</p> */}
                             <p className='bill-payer-amount'>${(this.props.bill.amount).toFixed(2)}</p>
-
                         </div>
                         <div className='bill-payee'>
                             <p className='bill-payer-name'>{this.payee()}</p> 
@@ -116,6 +115,29 @@ class FriendBillItem extends React.Component {
                             <div id="close-x" onClick={this.handleClick}>x</div>
                         </div>
                     </span>
+                </div>
+            
+                <div className='bill-details'>
+                    <div className='bill-details-1'>
+                        <span className='fas fa-receipt'>
+                        </span>
+                        <span className='bill-details-1-right'>
+                            <div>
+                                {this.props.bill.description}
+                            </div>
+                            <div>
+                                {this.props.bill.amount}
+                            </div>
+                            <button>Edit expense</button>
+                            {/* <div>
+                                 {this.props.updateBillForm}
+                            </div> */}
+                        </span>
+                    </div>
+                    <div className='bill-details-2'>
+
+                    </div>
+
                 </div>
                
             </li>

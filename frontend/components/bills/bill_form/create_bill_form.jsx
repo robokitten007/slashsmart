@@ -1,6 +1,6 @@
 import React from 'react';
 
-class BillForm extends React.Component {
+class CreateBillForm extends React.Component {
     constructor(props){
         super(props)
         this.state = this.props.bill
@@ -157,4 +157,4 @@ class BillForm extends React.Component {
 
 }
 
-export default BillForm
+export default CreateBillForm
