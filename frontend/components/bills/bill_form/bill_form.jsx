@@ -39,12 +39,6 @@ class BillForm extends React.Component {
      }
 
     render(){
-        // const friendList = this.props.friends.map((friend)=>friend.friend)
-        // console.log(friendList)
-        
-          // if(!this.props.friendId){
-          //   return null;
-          // }
         
         return (
 
@@ -59,7 +53,7 @@ class BillForm extends React.Component {
         
           <div className='add-bill-friends'>
                 <div className='friend-name'>
-                With
+                Between
                 <span id='font-bold'> you </span>
                 and: 
                 </div>
@@ -99,6 +93,7 @@ class BillForm extends React.Component {
                           {this.getFriend()}  
                         </option>
                       </select>
+                      and split equally
                     </div>
                 
                 </div>
@@ -114,13 +109,13 @@ class BillForm extends React.Component {
                     />
                     <br/>
                     <br/>
-                    <span>Total Amount:</span>
+                    <span>Amount:</span>
                     <input type="number"
                     value={this.state.amount}
                     onChange={this.update('amount')}
                     className="add-bill-amt"
                     />
-                    <br/>
+                    {/* <br/>
                     <br/>
                     <span>Amount_Paid:</span>
                     <br/>
@@ -128,7 +123,7 @@ class BillForm extends React.Component {
                     value={this.state.amount_paid}
                     onChange={this.update('amount_paid')}
                     className="add-bill-amt"
-                    />
+                    /> */}
                 </div>
             </div>
 

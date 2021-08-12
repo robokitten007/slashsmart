@@ -95,18 +95,21 @@ class FriendBillItem extends React.Component {
                
            <li >
                 <div className='bill-index-item'>
-                    <span className='bill-left'>
+                    <span className='bill-left'>y
                         {this.getDate()} <p>{this.props.bill.description}</p>
                     </span>
                     <span className='bill-right'>
                         <div className='bill-payer'>
                             <p className='bill-payer-name'>{this.payer()}</p>  
-                            <p className='bill-payer-amount'>${(this.props.bill.amount_paid).toFixed(2)}</p>
+                            {/* <p className='bill-payer-amount'>${(this.props.bill.amount_paid).toFixed(2)}</p> */}
+                            <p className='bill-payer-amount'>${(this.props.bill.amount).toFixed(2)}</p>
+
                         </div>
                         <div className='bill-payee'>
                             <p className='bill-payer-name'>{this.payee()}</p> 
-                    
-                            <p className={this.color()} >${(this.props.bill.amount_paid-(this.props.bill.amount)/2).toFixed(2)}</p>
+                            {/* <p className={this.color()} >${(this.props.bill.amount_paid-(this.props.bill.amount)/2).toFixed(2)}</p> */}
+                            <p className={this.color()} >${(this.props.bill.amount/2).toFixed(2)}</p>
+
                         </div>
                         <div className='delete-bill'>
                             {/* {<div onClick={()=>deleteBill(bill.id)} id="close-x">X</div>} */}
