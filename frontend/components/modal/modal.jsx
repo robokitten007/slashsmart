@@ -27,13 +27,15 @@ function Modal({modal, closeModal}) {
   );
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
+
   return {
     modal: state.ui.modal
   };
 };
 
 const mapDispatchToProps = dispatch => {
+  
   return {
     closeModal: () => dispatch(closeModal())
   };

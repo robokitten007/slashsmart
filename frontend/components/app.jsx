@@ -7,6 +7,8 @@ import NavBarContainer from './navbar/navbar_container';
 import DashboardContainer from './dashboard/dashboard_container';
 import Splash from './splash/splash';
 import Modal from './modal/modal'
+import FriendsIndexContainer from './friends/friends_index_container';
+// import FriendBillsContainer from './bills/friend_bills/friend_bills_container'
 const App = () => {
 
     return(    
@@ -19,6 +21,8 @@ const App = () => {
     <AuthRoute exact path="/" component={Splash} />
     <AuthRoute  path="/login" component={LoginFormContainer} />
     <ProtectedRoute path="/dashboard" component={DashboardContainer} />
+    <ProtectedRoute path="/dashboard/:id" component={FriendsIndexContainer} />
+
   </div>
     )
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class FriendBillItem extends React.Component {
     constructor(props){
@@ -8,6 +9,7 @@ class FriendBillItem extends React.Component {
         this.getDate = this.getDate.bind(this);
         this.color = this.color.bind(this);
         this.handleClick = this.handleClick.bind(this);
+        // this.handleBill = this.handleBill.bind(this);
     }
     
 
@@ -39,7 +41,6 @@ class FriendBillItem extends React.Component {
             return 'You paid'
         }
 
-        // return 'test'
     }
 
       payee() {
@@ -89,6 +90,15 @@ class FriendBillItem extends React.Component {
         }
     }    
 
+    // handleBill(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     const { bill } = this.props
+    //     let billId = bill.id
+    //     this.props.fetchBill(bill.id)
+    // }
+
+
     render(){
         const{currentUser, friend, bill, fetchBill, deleteBill} = this.props
         return( 
@@ -128,10 +138,14 @@ class FriendBillItem extends React.Component {
                             <div>
                                 {this.props.bill.amount}
                             </div>
-                            <button>Edit expense</button>
-                            {/* <div>
-                                 {this.props.updateBillForm}
-                            </div> */}
+                            {/* <button>Edit expense</button> */}
+
+                            {/* <div onClick={this.handleBill}> */}
+                            <Link to={`/dashboard/${bill.friend_id}/bills/${bill.id}`}>
+                              {this.props.updateBillForm}
+                            </Link>
+                               
+                            {/* </div> */}
                         </span>
                     </div>
                     <div className='bill-details-2'>

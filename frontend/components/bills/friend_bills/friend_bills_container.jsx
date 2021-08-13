@@ -40,7 +40,7 @@ const mDTP = dispatch =>({
         Edit an expense
       </button>
     ),
-  closeModal: () => dispatch(closeModal()),
+  closeModal: () => dispatch(closeModal())
 })
 
 
