@@ -68,7 +68,7 @@ class FriendBillsIndex extends React.Component {
                     currentUser={currentUser}
                     fetchBill={fetchBill}
                     bill={bill}
-                    updateBillFrom={this.props.updateBillFrom}
+                    updateBillForm={this.props.updateBillForm}
                 />
                 ))
             )}

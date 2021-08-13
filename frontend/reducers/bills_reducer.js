@@ -8,6 +8,7 @@ const billsReducer = (state = {}, action) => {
         case RECEIVE_BILLS:
             return action.bills
         case RECEIVE_BILL:
+            // return {[action.bill.id]: action.bill}
             newState[action.bill.id] = action.bill
             return newState
         case REMOVE_BILL:
