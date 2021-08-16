@@ -52,8 +52,8 @@ export const deleteBill = (id) => dispatch =>(
         err => dispatch(billErrors(err.responseJSON)))
 )
 
-export const updateBill = (bill) => dispatch =>(
-    BillsUtil.updateBill(bill)
+export const updateBill = (bill, id) => dispatch =>(
+    BillsUtil.updateBill(bill,id)
         .then((bill)=>(dispatch(receiveBill(bill))),
         err => dispatch(billErrors(err.responseJSON)))
 )
