@@ -30,16 +30,17 @@ const mDTP = dispatch =>({
   fetchBills: ()=>dispatch(fetchBills()),
   fetchBill: (id)=>dispatch(fetchBill(id)),
   deleteBill: (id)=>dispatch(deleteBill(id)),
+  updateBillForm: (singleBill) => dispatch(openModal('Update Bill', singleBill)), 
   createBillForm: (
-      <button className='create-bill-btn' onClick={() => dispatch(openModal('Create Bill'))}>
+      <button className='create-bill-btn' onClick={() => dispatch(openModal('Create Bill', null))}>
         Add an expense
       </button>
     ),
-    updateBillForm: (
-      <button className='update-bill-btn' onClick={() => dispatch(openModal('Update Bill'))}>
-        Edit an expense
-      </button>
-    ),
+    // updateBillForm: (
+    //   <button className='update-bill-btn' onClick={(singleBill) => dispatch(openModal('Update Bill', singleBill))}>
+    //     Edit an expense
+    //   </button>
+    // ),
   closeModal: () => dispatch(closeModal())
 })
 

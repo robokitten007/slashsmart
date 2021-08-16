@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-
+import { openModal } from '../../../actions/modal_actions';
+import UpdateBillContainer from '../bill_form/update_bill_container'
 class FriendBillItem extends React.Component {
     constructor(props){
         super(props);
@@ -9,7 +10,7 @@ class FriendBillItem extends React.Component {
         this.getDate = this.getDate.bind(this);
         this.color = this.color.bind(this);
         this.handleClick = this.handleClick.bind(this);
-        // this.handleBill = this.handleBill.bind(this);
+        this.handleBill = this.handleBill.bind(this);
     }
     
 
@@ -90,13 +91,14 @@ class FriendBillItem extends React.Component {
         }
     }    
 
-    // handleBill(e){
-    //     e.preventDefault();
-    //     e.stopPropagation();
-    //     const { bill } = this.props
-    //     let billId = bill.id
-    //     this.props.fetchBill(bill.id)
-    // }
+    handleBill(e){
+        e.preventDefault();
+        e.stopPropagation();
+        const { bill } = this.props
+        console.log(bill)
+        this.props.updateBillForm(bill)
+        
+    }
 
 
     render(){
@@ -138,14 +140,9 @@ class FriendBillItem extends React.Component {
                             <div>
                                 {this.props.bill.amount}
                             </div>
-                            {/* <button>Edit expense</button> */}
-
-                            {/* <div onClick={this.handleBill}> */}
-                            <Link to={`/dashboard/${bill.friend_id}/bills/${bill.id}`}>
-                              {this.props.updateBillForm}
-                            </Link>
-                               
-                            {/* </div> */}
+           
+                            <button onClick={this.handleBill}>Edit expense</button>
+    
                         </span>
                     </div>
                     <div className='bill-details-2'>
