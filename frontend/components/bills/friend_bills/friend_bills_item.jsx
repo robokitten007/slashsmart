@@ -5,12 +5,18 @@ import UpdateBillContainer from '../bill_form/update_bill_container'
 class FriendBillItem extends React.Component {
     constructor(props){
         super(props);
+    //set state to trigger automatic rendering
+        this.state = {
+            showDetails: false
+        }
         this.payer = this.payer.bind(this);
         this.payee = this.payee.bind(this);
         this.getDate = this.getDate.bind(this);
         this.color = this.color.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleBill = this.handleBill.bind(this);
+        this.handleToggle = this.handleToggle.bind(this)
+        // this.showDetails = false
     }
     
 
@@ -95,17 +101,30 @@ class FriendBillItem extends React.Component {
         e.preventDefault();
         e.stopPropagation();
         const { bill } = this.props
-        console.log(bill)
+        // console.log(bill)
         this.props.updateBillForm(bill)
         
+    }
+    
+    handleToggle(e){
+        e.preventDefault();
+        // e.stopPropagation();
+       if (!this.state.showDetails) {
+           this.setState({showDetails: true})
+       } else {
+           this.setState({showDetails: false})
+       }
     }
 
 
     render(){
+        const show_details = this.showDetails ? 'show' : 'not-show'
+        console.log(show_details)
         const{currentUser, friend, bill, fetchBill, deleteBill} = this.props
+        // debugger
         return( 
                
-           <li >
+           <li onClick={this.handleToggle}>
                 <div className='bill-index-item'>
                     <span className='bill-left'>y
                         {this.getDate()} <p>{this.props.bill.description}</p>
@@ -129,7 +148,9 @@ class FriendBillItem extends React.Component {
                     </span>
                 </div>
             
-                <div className='bill-details'>
+                <div className={this.state.showDetails ? 'show' : 'not-show'}>
+                    {console.log('got here!')}
+                    {console.log(show_details)}
                     <div className='bill-details-1'>
                         <span className='fas fa-receipt'>
                         </span>
