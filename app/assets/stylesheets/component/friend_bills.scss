@@ -73,6 +73,12 @@
 
 }
 
+.create-bill-btn:hover{
+  box-shadow: none;
+  position: relative;
+  top: 2px;
+}
+
 #close-x{
     cursor: pointer;
 }
@@ -83,11 +89,12 @@
     justify-content: space-between;
     padding: 10px 0 10px 0;
     font-family: Lato;
-    font-size: 16px;
-    color: #333333;
+    font-size: 18px;
+    // color: #333333;
     min-height: 32px;
     align-items: center;
     cursor: pointer;
+    margin-left: 20px;
 }
 
 .bill-left > p, .bill-right > p {
@@ -108,6 +115,7 @@
 
 
 
+
 .bill-right {
     display: flex;
     justify-content: center;
@@ -123,6 +131,7 @@
     display: block;
     text-align: center;
     justify-content: center;
+    
 }
 
 .bill-payer-name {
@@ -130,6 +139,7 @@
     // color: black;
     font-size: 12px;
     font-weight: 500;
+    margin-bottom: 5px;
 }
 
 .bill-payer-amount {
@@ -200,5 +210,60 @@
 }
 
 
+.bill-details-1{
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    justify-content: flex-start;
+    padding: 10px 0 10px 0;
+    font-family: Lato;
+    font-size: 14px;
+    min-height: 32px;
+    align-items: center;
+    margin-left: 20px;
 
+}
 
+.bill-details-1-right{
+    margin-left: 10px;
+}
+
+.bill-details-1-right-amount{
+    color:black;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.bill-details-1-right-time{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.bill-edit{
+align-items: center;
+  cursor: pointer;
+  //height: 10px;
+  text-align: center;
+  line-height: 14px;
+  vertical-align: -5px;
+  width: 100px;
+  background-color: #ff652f;
+  font-family: Lato;
+  font-weight: 400;
+  font-size: 10px;
+  color: white;
+  border: 0px;
+  border-radius: 5px;
+  box-shadow: 0 4px 2px -2px gray;
+  padding: 5px 8px 5px 8px;
+  // line-height: 1.5px;
+  text-decoration: none;
+}
+
+.bill-edit:hover{
+  box-shadow: none;
+  position: relative;
+  top: 2px;
+}

@@ -44,26 +44,26 @@ class UpdateBillForm extends React.Component{
         if(!bill) return null;
         return (
 
-            <div className="edit-bill-form">
-        <form onSubmit={this.handleSubmit} className="edit-bill-form">
+            <div className="add-bill-form">
+        <form onSubmit={this.handleSubmit} className="add-bill-form">
           
-              <div className="edit-bill-head">
+              <div className="add-bill-head">
                 <span>Edit an expense</span>
                 <div onClick={this.props.closeModal} className="close-x">X</div>
               </div>
         
-          <div className='edit-bill-friends'>
+          <div className='add-bill-friends'>
                 <div className='friend-name'>
                 Between
                 <span id='font-bold'> you </span>
                 and: 
                 </div>
-              
+  
                 <span>{this.getFriend()}</span>
           
           </div>
 
-          <div className='edit-bill-details-1'>
+          <div className='add-bill-details-1'>
             
                 <div className='details-1-left'>
                     
@@ -80,9 +80,8 @@ class UpdateBillForm extends React.Component{
                     <label for='paidby' className='details-2-top'>
                     Paid by:
                     </label>
-          
 
-                    <div className='edit-bill-paidby'>
+                    <span className='add-bill-paidby'>
                       <select name='paidby'
                               className='paidby' 
                               onChange={this.update('paid_by_user')} 
@@ -94,26 +93,23 @@ class UpdateBillForm extends React.Component{
                         </option>
                       </select>
                       and split equally
-                    </div>
+                    </span>
                 
                 </div>
 
             <div className='details-1-right'>
-
-                <div className='edit-bill-desc-amt'>
-                    <span>Enter a description:</span>
+                    <span className='add-bill-desc-amt'>Enter a description: </span>
                     <input type="text"
                     value={this.state.description}
                     onChange={this.update('description')}
-                    className="edit-bill-desc"
+                    className="add-bill-desc"
                     />
-                    <br/>
                     <br/>
                     <span>Amount:</span>
                     <input type="number"
                     value={this.state.amount}
                     onChange={this.update('amount')}
-                    className="edit-bill-amt"
+                    className="add-bill-amt"
                     />
                     {/* <br/>
                     <br/>
@@ -125,11 +121,11 @@ class UpdateBillForm extends React.Component{
                     className="add-bill-amt"
                     /> */}
                 </div>
-            </div>
+
 
           </div>
 
-          <div className='edit-bill-details-2'>
+          <div className='add-bill-details-2'>
             <div className='details-2-bottom'>
               Notes:
               <br/>
@@ -142,7 +138,7 @@ class UpdateBillForm extends React.Component{
 
           </div>
 
-          <div className="edit-bill-buttons">
+          <div className="add-bill-buttons">
            <input className="btn-save" type="submit" value="Save" /> 
           <button className='btn-cancel' onClick={this.props.closeModal}>Cancel</button>
           </div>
