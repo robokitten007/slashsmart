@@ -3,28 +3,28 @@ import React from 'react';
 class UpdateBillForm extends React.Component{
     constructor(props){
         super(props)
-        this.state= this.props.SingleBill
+        this.state= this.props.bill
         this.handleSubmit = this.handleSubmit.bind(this)
-        // this.getFriend = this.getFriend.bind(this)
+        this.getFriend = this.getFriend.bind(this)
     }
 
     componentDidMount(){
         this.props.fetchBills
     }
 
-    // getFriend(){
+    getFriend(){
 
-    //   const {friends, friendId} = this.props
-    //   // console.log(friendId)
-    //   let friendName
-    //   friends.forEach((friend)=>{
-    //     if(friend.friend_id === friendId){
-    //       friendName = friend.friend
-    //     }
-    //   })
-    //   // console.log(friendName)
-    //   return friendName
-    // }
+      const {friends, friendId} = this.props
+      // console.log(friendId)
+      let friendName
+      friends.forEach((friend)=>{
+        if(friend.friend_id === friendId){
+          friendName = friend.friend
+        }
+      })
+      // console.log(friendName)
+      return friendName
+    }
 
      update(field){
             return e => {
@@ -35,13 +35,13 @@ class UpdateBillForm extends React.Component{
 
      handleSubmit(e){
         e.preventDefault();
-        this.props.processForm(this.state)
+        this.props.processForm(this.state, this.props.billId)
             .then(this.props.closeModal)
      }
 
     render(){
-        const {SingleBill, currentUser} = this.props
-        if(!SingleBill) return null;
+        const {bill, currentUser} = this.props
+        if(!bill) return null;
         return (
 
             <div className="edit-bill-form">
@@ -59,7 +59,7 @@ class UpdateBillForm extends React.Component{
                 and: 
                 </div>
               
-                <span>{SingleBill.partner}</span>
+                <span>{this.getFriend()}</span>
           
           </div>
 
@@ -70,7 +70,6 @@ class UpdateBillForm extends React.Component{
                     <div className='category'>
                         <label> Category
                             <input type="text"
-                                // placeholder = 'General'
                                 name='category'
                                 value={this.state.category}
                                 onChange={this.update('category')}
@@ -91,7 +90,7 @@ class UpdateBillForm extends React.Component{
                         <option value="true">you</option>
 
                         <option value="false">
-                          {SingleBill.partner}  
+                         {this.getFriend()} 
                         </option>
                       </select>
                       and split equally
@@ -144,7 +143,6 @@ class UpdateBillForm extends React.Component{
           </div>
 
           <div className="edit-bill-buttons">
-            {/* <input className="btn-cancel" type="submit" value="Cancel" /> */}
            <input className="btn-save" type="submit" value="Save" /> 
           <button className='btn-cancel' onClick={this.props.closeModal}>Cancel</button>
           </div>
