@@ -3,7 +3,7 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import CreateBillContainer from '../bills/bill_form/create_bill_container'
 import UpdateBillContainer from '../bills/bill_form/update_bill_container'
-function Modal({modal, closeModal}) {
+function Modal({modal, closeModal, singleBill}) {
   if (!modal) {
     return null;
   }
@@ -13,7 +13,7 @@ function Modal({modal, closeModal}) {
       component = <CreateBillContainer />;
       break;
     case 'Update Bill':
-      component = <UpdateBillContainer />;
+      component = <UpdateBillContainer singleBill = {singleBill}/>;
       break;
     default:
       return null;
@@ -30,7 +30,8 @@ function Modal({modal, closeModal}) {
 const mapStateToProps = (state) => {
 
   return {
-    modal: state.ui.modal
+    modal: state.ui.modal,
+    singleBill: state.ui.singleBill
   };
 };
 
