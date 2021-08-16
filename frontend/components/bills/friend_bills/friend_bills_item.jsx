@@ -167,14 +167,20 @@ class FriendBillItem extends React.Component {
                             <button className='bill-edit'onClick={this.handleBill}>Edit expense</button>
                         </span>
                     </div>
-                    {/* <div className='bill-details-2'>
+                    <div className='bill-details-2'>
                         <div className='bill-details-2-left'>
-                            <p></p>
+                        <span className='fas fa-user-circle'>{this.payer()} ${(this.props.bill.amount).toFixed(2)}</span>
+                        <span className='fas fa-user-circle'>{this.payee()} ${(this.props.bill.amount/2).toFixed(2)}</span>
                         </div>
 
-                        <div className='bill-details-2-right'></div>
+                        <div className='bill-details-2-right'>
+                            <p className='fas fa-comment'>Notes and Comments:</p>
+                            <p id={this.props.bill.notes ? 'show' : 'not-show'}className='bill-details-2-right-notes'>{this.props.bill.notes}</p>
+                        
+                        <button>Add notes</button>
+                        </div>
 
-                    </div> */}
+                    </div>
 
                 </div>
                
