@@ -79,7 +79,7 @@ class FriendBillItem extends React.Component {
             '11': "NOV",
             "12": "DEC"
         }
-         let date = bill.updated_at
+         let date = bill.created_at
          let month = date.slice(5, 7)
          let day = date.slice(8, 10)
        return (
@@ -118,16 +118,18 @@ class FriendBillItem extends React.Component {
 
 
     render(){
-        const show_details = this.showDetails ? 'show' : 'not-show'
-        console.log(show_details)
+        // const show_details = this.showDetails ? 'show' : 'not-show'
         const{currentUser, friend, bill, fetchBill, deleteBill} = this.props
         // debugger
         return( 
                
-           <li onClick={this.handleToggle}>
-                <div className='bill-index-item'>
-                    <span className='bill-left'>y
-                        {this.getDate()} <p>{this.props.bill.description}</p>
+           <li >
+                <div onClick={this.handleToggle} className='bill-index-item'>
+                    <span className='bill-left'>
+                        {/* <span className='bill-left-1'> */}
+                        <span>{this.getDate()} </span>
+                        <span className="fas fa-receipt fa-2x"></span> 
+                        <p>{this.props.bill.description}</p>
                     </span>
                     <span className='bill-right'>
                         <div className='bill-payer'>
@@ -149,26 +151,30 @@ class FriendBillItem extends React.Component {
                 </div>
             
                 <div className={this.state.showDetails ? 'show' : 'not-show'}>
-                    {console.log('got here!')}
-                    {console.log(show_details)}
+                    {/* {console.log('got here!')}
+                    {console.log(show_details)} */}
                     <div className='bill-details-1'>
-                        <span className='fas fa-receipt'>
-                        </span>
+                        <span className='fas fa-receipt fa-4x'> </span>
                         <span className='bill-details-1-right'>
-                            <div>
+                            <p>
                                 {this.props.bill.description}
-                            </div>
-                            <div>
+                            </p>
+                            <p className='bill-details-1-right-amount'> $
                                 {this.props.bill.amount}
-                            </div>
+                            </p>
+                            <p className='bill-details-1-right-time'>Added by {this.props.bill.author} on {this.props.bill.created_at.slice(0,10)}</p>
            
-                            <button onClick={this.handleBill}>Edit expense</button>
-    
+                            <button className='bill-edit'onClick={this.handleBill}>Edit expense</button>
                         </span>
                     </div>
-                    <div className='bill-details-2'>
+                    {/* <div className='bill-details-2'>
+                        <div className='bill-details-2-left'>
+                            <p></p>
+                        </div>
 
-                    </div>
+                        <div className='bill-details-2-right'></div>
+
+                    </div> */}
 
                 </div>
                

@@ -16,15 +16,18 @@
   background-color: white;
   width:360px;
   height: 420px;
-  border-radius: 5px;
+  border-radius: 8px;
   border: 2px solid #999999;
   display:flex;
   flex-direction: column;
+  font-family: Lato;
+  font-size: 14px;
 
 }
 
 .add-bill-form {
   background-color: white;
+  // border-radius: 8px;
 }
 
 .add-bill-head {
@@ -59,24 +62,25 @@
   font-family: Lato;
   font-size: 14px;
   margin-bottom: 20px;
-  padding-right: 10px;
+  // padding-right: 10px;
 }
 
 .details-1-left {
   display:flex;
   flex-direction: column;
-  justify-content: flex-end;
+  // justify-content: flex-end;
   padding-left: 10px;
+  margin-top: 8px;
   
 }
 
-.details-1-left img {
-  padding-left: 45px; 
-  margin-top: 5px;
-}
-
 .details-1-right {
+  display:flex;
+  flex-direction: column;
+  // justify-content: flex-end;
   padding-left: 25px;
+  margin-top: 8px;
+  margin-right: 10px;
 }
 
 
@@ -86,9 +90,9 @@
   height: 23px;
 }
 
-.add-bill-desc-amt {
-  margin-top: 20px;
-}
+// .add-bill-desc-amt {
+//   margin-top: 20px;
+// }
 
 .add-bill-details-2 {
   display: flex;
@@ -111,14 +115,11 @@ select.paidby {
   border: 0.5px solid #cccccc;
 }
 
-.details-2-middle {
- margin-top: 5px; 
- margin-bottom: 10px
-}
-
 .add-bill-notes {
   border: 0.5 solid #cccccc;
   width: 335px;
+  border-radius: 8px;
+  margin-top: 5px;
 }
 
 .add-bill-buttons {
@@ -137,19 +138,57 @@ select.paidby {
   padding: 1px 6px;
   float: right;
   margin: 0 0 20px 0;
+  background-color: #5bc5a7;
+  // box-shadow: 0 4px 2px -2px gray;
+  cursor: pointer;
+  color: white;
+  // border: 0px;
+  // vertical-align: -5px;
 }
+
+.btn-save:hover{
+  // box-shadow: none;
+  position: relative;
+  top: 5px;
+}
+
 .btn-cancel {
   margin: 0 10px;
   float: right;
   font: 400 13.3333px Arial;
   margin-bottom: 20px;
+  padding: 1px 6px;
+  border-radius: 5px;
+}
+.btn-cancel:hover{
+  position: relative;
+  top: 5px
 }
 
 .friend-name {
   margin-right: 5px;
 }
 
-.category input {
+.close-x{
+  cursor: pointer;
+}
+
+.add-bill-form input{
+  font-family: Lato;
+  font-size: 14px;
   border: 0.5px solid #cccccc;
   height: 23px;
+  border-radius: 5px;
 }
+
+.add-bill-desc{
+  margin-top: 6px;
+}
+
+.details-2-top{
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+
+}
+
