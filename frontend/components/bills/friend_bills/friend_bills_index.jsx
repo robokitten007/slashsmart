@@ -30,7 +30,7 @@ class FriendBillsIndex extends React.Component {
 
     
     render(){
-    const {currentUser, friend, fetchBill, deleteBill} = this.props
+    const {currentUser, friend, fetchBill, deleteBill, updateBillForm} = this.props
 
         if (!friend) {
             return null
@@ -68,7 +68,7 @@ class FriendBillsIndex extends React.Component {
                     currentUser={currentUser}
                     fetchBill={fetchBill}
                     bill={bill}
-                    updateBillForm={this.props.updateBillForm}
+                    updateBillForm={updateBillForm}
                 />
                 ))
             )}
