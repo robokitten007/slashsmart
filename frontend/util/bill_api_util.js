@@ -22,10 +22,10 @@ export const fetchBill =(id)=>(
     }))
 
 //update
-export const updateBill =(bill)=>(
+export const updateBill =(bill, id)=>(
     $.ajax({
         method: 'patch',
-        url: `api/bills/${bill.id}`,
+        url: `api/bills/${id}`,
         data: {bill}
     }))
 
