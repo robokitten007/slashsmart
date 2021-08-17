@@ -4,6 +4,7 @@ import FriendsIndexContainer from '../friends/friends_index_container';
 import FriendAddContainer from '../friends/freind_add_container';
 import FriendRemoveContainer from '../friends/friend_remove_container';
 import FriendBillsContainer from '../bills/friend_bills/friend_bills_container';
+import FriendBalanceContainer from '../balance/friend_balance/friend_balance_container';
 class Dashboard extends React.Component {
     constructor(props) {
         super(props)
@@ -59,9 +60,11 @@ class Dashboard extends React.Component {
                     </div>
 
                     <div className='right-dash'>
-                            <Switch>
-                            <Route exact path='/dashboard/:userId' component={FriendRemoveContainer} />
-                        </Switch>
+                        {/* <Switch> */}
+                            <Route path='/dashboard/:userId' component={FriendRemoveContainer} />
+                            <Route path='/dashboard/:userId' component={FriendBalanceContainer} />
+
+                        {/* </Switch> */}
                     </div>
                 </div>
             </div>
