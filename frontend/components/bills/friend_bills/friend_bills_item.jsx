@@ -65,7 +65,7 @@ class FriendBillItem extends React.Component {
 
      getDate() {
         const { bill } = this.props
-        const monthHead = {
+        const monthTitle = {
             "01": "JAN",
             "02": "FEB",
             "03": "MAR",
@@ -84,7 +84,7 @@ class FriendBillItem extends React.Component {
          let day = date.slice(8, 10)
        return (
             <div className='friend-bill-date'>
-                <p className='friend-bill-month'>{monthHead[month]}</p> <p className='friend-bill-day'>{day}</p>
+                <p className='friend-bill-month'>{monthTitle[month]}</p> <p className='friend-bill-day'>{day}</p>
             </div>
         )
     }    
