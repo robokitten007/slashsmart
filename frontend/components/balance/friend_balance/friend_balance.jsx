@@ -79,6 +79,10 @@ getBalance(){
 
 
     render(){
+        let finalBalance = this.getBalance()
+        if (finalBalance < 0){
+            finalBalance = -finalBalance
+        }
         // console.log(this.color())
         return (
 
@@ -86,7 +90,7 @@ getBalance(){
             <div className='friend-balance'>
                 <h1>YOUR BALANCE</h1>
                 <span className={this.color()}>{this.payee()}{this.payer()}</span>
-                <p className={this.color()}>${this.getBalance()}</p>
+                <p className={this.color()}>${finalBalance}</p>
             </div>
         )
        
