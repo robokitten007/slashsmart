@@ -5,6 +5,9 @@ import FriendAddContainer from '../friends/freind_add_container';
 import FriendRemoveContainer from '../friends/friend_remove_container';
 import FriendBillsContainer from '../bills/friend_bills/friend_bills_container';
 import FriendBalanceContainer from '../balance/friend_balance/friend_balance_container';
+import AllExpensesContainer from '../expenses/all_expenses_container'
+import { Link } from 'react-router-dom';
+ 
 class Dashboard extends React.Component {
     constructor(props) {
         super(props)
@@ -25,11 +28,11 @@ class Dashboard extends React.Component {
                         </h1> 
                     <div>
                         <h1>
-                            <a href="#/dashboard" className='fas fa-money-check'>
+                            <Link to="/dashboard/all" className='fas fa-money-check'>
                                 <span className='left-dash-item'>
                                 All expenses
                                 </span>
-                            </a>
+                            </Link>
                         </h1>
                     </div>
 
@@ -51,20 +54,23 @@ class Dashboard extends React.Component {
                 </div>
                 <div className='content-container'>
                     <div className='mid-dash'>
-                        {/* <h1>this is the mid-dash</h1> */}
-
-                        <Switch>
+      
                             <Route exact path='/dashboard/:userId' component={FriendBillsContainer} />
-                        </Switch>
-                        {/* <FriendBillsContainer/> */}
+                            <Route exact path='/dashboard/all' component={AllExpensesContainer} />
                     </div>
 
                     <div className='right-dash'>
-                        {/* <Switch> */}
-                            <Route path='/dashboard/:userId' component={FriendRemoveContainer} />
-                            <Route path='/dashboard/:userId' component={FriendBalanceContainer} />
+                            <Switch>
+                                <Route exact path='/dashboard/all' render={()=>null} />                       
+                                <Route exact path='/dashboard/:userId' component={FriendRemoveContainer} />
+                            </Switch>
 
-                        {/* </Switch> */}
+                             <Switch>
+                                <Route exact path='/dashboard/all' render={()=>null} />
+                                <Route exact path='/dashboard/:userId' component={FriendBalanceContainer} />
+                                
+                            </Switch>
+
                     </div>
                 </div>
             </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 import FriendBillItem from './friend_bills_item';
 
-import { Link } from 'react-router-dom';
 
 
 class FriendBillsIndex extends React.Component {
