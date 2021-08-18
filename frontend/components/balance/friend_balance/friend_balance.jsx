@@ -83,12 +83,13 @@ getBalance(){
         if (finalBalance < 0){
             finalBalance = -finalBalance
         }
-        console.log("friend balance")
+
+        
         return (
 
             
             <div className='friend-balance'>
-                <h1>YOUR BALANCE From FriendBalance Container</h1>
+                <h1>YOUR BALANCE</h1>
                 <span className={this.color()}>{this.payee()}{this.payer()}</span>
                 <p className={this.color()}>${finalBalance}</p>
             </div>

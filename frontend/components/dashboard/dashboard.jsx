@@ -5,7 +5,8 @@ import FriendAddContainer from '../friends/freind_add_container';
 import FriendRemoveContainer from '../friends/friend_remove_container';
 import FriendBillsContainer from '../bills/friend_bills/friend_bills_container';
 import FriendBalanceContainer from '../balance/friend_balance/friend_balance_container';
-import AllExpensesContainer from '../expenses/all_expenses_container'
+import AllExpensesContainer from '../expenses/all_expenses_container';
+import AllbalanceContainer from '../balance/all_balance/all_balance_container'
 import { Link } from 'react-router-dom';
  
 class Dashboard extends React.Component {
@@ -61,7 +62,8 @@ class Dashboard extends React.Component {
 
                     <div className='right-dash'>
                             <Switch>
-                                <Route exact path='/dashboard/all' render={()=>null} />                       
+                                {/* <Route exact path='/dashboard/all' render={()=>null} />   */}
+                                <Route exact path='/dashboard/all' component={AllbalanceContainer} />                      
                                 <Route exact path='/dashboard/:userId' component={FriendRemoveContainer} />
                             </Switch>
 
