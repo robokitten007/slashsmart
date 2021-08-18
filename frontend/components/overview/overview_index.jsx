@@ -94,8 +94,9 @@ class OverviewIndex extends React.Component{
                 </div>
 
                 <div className='expense-list'>
-                    <ul>
+                    <ul className = 'overview-item'>
                         {friends.map((friend)=>(
+                            
                             <OverviewItem
                                 key={friend.id}
                                 friend={friend}

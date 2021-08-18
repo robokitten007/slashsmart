@@ -269,3 +269,34 @@ input::placeholder {
   padding-top: 10px;
 }
 
+.overview-item{
+  // display: flex;
+  // flex-direction: column;
+  font-family: Lato;
+  font-size: 20px;
+  
+}
+
+.overview-item li{
+  margin-bottom: 20px;
+  border-bottom: solid 1px;
+  display: flex;
+  justify-content: space-between;
+  // margin-left: 50px;
+  // margin-right: 50px;
+}
+
+.overview-item span{
+  font-size: 20px;
+  font-family: Lato;
+  // border-bottom: solid 1;
+  margin-right: 50px;
+}
+
+.overview-item h1{
+  margin-left: 50px;
+  color: black;
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+
