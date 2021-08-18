@@ -5,6 +5,7 @@ import { fetchBill, fetchBills, deleteBill } from '../../actions/bill_actions'
 
 
 const mSTP = state =>{
+    console.log('all expenses container')
     return (
         { 
             currentUser: state.entities.users[state.session.id],

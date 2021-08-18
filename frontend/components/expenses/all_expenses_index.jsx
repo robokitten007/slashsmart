@@ -1,4 +1,5 @@
 import React from 'react';
+import AllExpensesItem from './all_expenses_item'
 
 
 class AllExpensesIndex extends React.Component{
@@ -19,7 +20,33 @@ class AllExpensesIndex extends React.Component{
 
     return(
         <div>
-            this is allexpenseindex comp
+            <div className='topbar-friend'>
+                <div>
+                    <span>All expenses</span>
+                </div>
+                    
+                {/* <button onClick ={this.handleClick}>Add Expense</button> */}
+                <div>
+                    <button>Add an expense</button>
+                    {/* {this.props.createBillForm} */}
+                </div>
+            </div>
+            <div className='expense-list'>
+                <ul>
+             
+                {bills.map((bill) => (
+                <AllExpensesItem
+                    key={bill.id}
+                    deleteBill={deleteBill}
+                    currentUser={currentUser}
+                    fetchBill={fetchBill}
+                    bill={bill}
+                    // updateBillForm={updateBillForm}
+                />
+                ))
+            }
+            </ul>
+            </div>
         </div>     
     )
   }
