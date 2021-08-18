@@ -12,7 +12,7 @@ class AllExpensesIndex extends React.Component{
     }
 
   render(){
-    const {currentUser, bills, fetchBill, deleteBill} = this.props
+    const {currentUser, bills, fetchBill, deleteBill, updateBillForm} = this.props
     
     if(!bills){
         return null
@@ -27,7 +27,7 @@ class AllExpensesIndex extends React.Component{
                     
                 {/* <button onClick ={this.handleClick}>Add Expense</button> */}
                 <div>
-                    <button>Add an expense</button>
+                    {/* <button>Add an expense</button> */}
                     {/* {this.props.createBillForm} */}
                 </div>
             </div>
@@ -41,7 +41,7 @@ class AllExpensesIndex extends React.Component{
                     currentUser={currentUser}
                     fetchBill={fetchBill}
                     bill={bill}
-                    // updateBillForm={updateBillForm}
+                    updateBillForm={updateBillForm}
                 />
                 ))
             }

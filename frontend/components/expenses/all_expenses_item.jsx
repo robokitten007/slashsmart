@@ -14,12 +14,11 @@ class AllExpensesItem extends React.Component {
         this.color = this.color.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleToggle = this.handleToggle.bind(this)
+        this.handleBill = this.handleBill.bind(this)
 
 
 
     }
-
-
 
        color() {
         const { bill, currentUser } = this.props
@@ -106,6 +105,13 @@ class AllExpensesItem extends React.Component {
        }
     }
 
+    handleBill(e){
+        e.preventDefault();
+        e.stopPropagation();
+        const {bill, updateBillForm} = this.props
+        updateBillForm(bill)
+    }
+
       render(){
         const{currentUser, friend, bill, fetchBill, deleteBill} = this.props
         // debugger
@@ -150,8 +156,8 @@ class AllExpensesItem extends React.Component {
                             </p>
                             <p className='bill-details-1-right-time'>Added by {this.props.bill.author} on {this.props.bill.created_at.slice(0,10)}</p>
            
-                            {/* <button className='bill-edit'onClick={this.handleBill}>Edit expense</button> */}
-                            <button className = 'bill-edit'>Edit expense</button>
+                            <button className='bill-edit'onClick={this.handleBill}>Edit expense</button>
+                            {/* <button className = 'bill-edit'>Edit expense</button> */}
                         </span>
                     </div>
                     <div className='bill-details-2'>
