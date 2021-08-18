@@ -228,9 +228,10 @@ input::placeholder {
 .topbar-balance{
   display: flex;
   justify-content: space-between;
-  background-color: #dddddd;
+  background-color:rgb(221,221,221);
   padding-top: 10px;
   padding-bottom: 10px;
+
   border-top: solid 1px;
   border-bottom: solid 1px;
   font-family: Lato;
@@ -247,7 +248,7 @@ input::placeholder {
 }
 
 .topbar-balance-2{
-  border-left: solid 1px;
+  border-left: solid 1px ;
   border-right: solid 1px;
   display: flex;
   flex-direction: column;
@@ -279,11 +280,9 @@ input::placeholder {
 
 .overview-item li{
   margin-bottom: 20px;
-  border-bottom: solid 1px;
-  display: flex;
-  justify-content: space-between;
-  // margin-left: 50px;
-  // margin-right: 50px;
+  border-bottom: solid 1px #e0e0e0;;
+  cursor: pointer;
+  
 }
 
 .overview-item span{
@@ -293,10 +292,19 @@ input::placeholder {
   margin-right: 50px;
 }
 
-.overview-item h1{
+.overview-friend{
   margin-left: 50px;
   color: black;
   font-weight: 700;
   padding-bottom: 15px;
+  
 }
+
+.overview-link{
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+
+}
+
 

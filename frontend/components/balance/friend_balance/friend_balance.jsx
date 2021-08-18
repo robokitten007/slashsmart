@@ -81,7 +81,7 @@ getBalance(){
     render(){
         let finalBalance = this.getBalance()
         if (finalBalance < 0){
-            finalBalance = -finalBalance
+            finalBalance = (-finalBalance).toFixed(2)
         }
 
         

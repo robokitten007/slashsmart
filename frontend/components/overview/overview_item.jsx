@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 class OverviewItem extends React.Component{
 
@@ -65,15 +66,18 @@ class OverviewItem extends React.Component{
        
         let finalBalance = this.getBalance()
         if(finalBalance <0){
-            finalBalance = -finalBalance
+            finalBalance = (-finalBalance).toFixed(2)
         }
 
         return (
+            
             <li>
-                <h1 >{friend.friend}</h1>
+                <Link className='overview-link' to={`/dashboard/${friend.friend_id}`}>
+                <span className='overview-friend'>{friend.friend}</span>
                 <span className={this.color()}>{this.display()}{finalBalance}</span>
-
+               </Link>
             </li>
+           
         )
     }
 }

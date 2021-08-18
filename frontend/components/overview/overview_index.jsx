@@ -50,7 +50,7 @@ class OverviewIndex extends React.Component{
     getBalance(){
         let balance
         balance = parseFloat(this.totalPositiveBalance())+parseFloat(this.totalNegativeBalance())
-        return balance
+        return balance.toFixed(2)
     }
 
     color(){
@@ -84,7 +84,7 @@ class OverviewIndex extends React.Component{
                     
                     <div className='topbar-balance-2'>
                         <p>you owe</p>
-                        <span className='bill-red'>{-this.totalNegativeBalance()}</span>
+                        <span className='bill-red'>{(-this.totalNegativeBalance()).toFixed(2)}</span>
                     </div>
 
                     <div className='topbar-balance-3'> 

@@ -54,7 +54,7 @@ class AllBalance extends React.Component{
     render(){
         let finalBalance = this.getBalance()
         if(finalBalance < 0){
-            finalBalance = -finalBalance
+            finalBalance = (-finalBalance).toFixed(2)
         }
         return (
             <div className = 'all-balance'>
