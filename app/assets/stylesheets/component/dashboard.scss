@@ -225,4 +225,47 @@ input::placeholder {
   
 }
 
+.topbar-balance{
+  display: flex;
+  justify-content: space-between;
+  background-color: #dddddd;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  font-family: Lato;
+
+}
+
+.topbar-balance-1{
+  padding-left: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.topbar-balance-2{
+  border-left: solid 1px;
+  border-right: solid 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px
+}
+.topbar-balance-3{
+  padding-right: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.topbar-balance span{
+  padding-top: 10px;
+}
 

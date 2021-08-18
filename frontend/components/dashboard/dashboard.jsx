@@ -7,6 +7,7 @@ import FriendBillsContainer from '../bills/friend_bills/friend_bills_container';
 import FriendBalanceContainer from '../balance/friend_balance/friend_balance_container';
 import AllExpensesContainer from '../expenses/all_expenses_container';
 import AllbalanceContainer from '../balance/all_balance/all_balance_container'
+import OverviewIndexContainer from '../overview/overview_container'
 import { Link } from 'react-router-dom';
  
 class Dashboard extends React.Component {
@@ -55,9 +56,12 @@ class Dashboard extends React.Component {
                 </div>
                 <div className='content-container'>
                     <div className='mid-dash'>
-      
-                            <Route exact path='/dashboard/:userId' component={FriendBillsContainer} />
+                        <Switch>
                             <Route exact path='/dashboard/all' component={AllExpensesContainer} />
+                            <Route exact path='/dashboard/:userId' component={FriendBillsContainer} />
+                            <Route exact path='/dashboard' component={OverviewIndexContainer} />
+
+                        </Switch>
                     </div>
 
                     <div className='right-dash'>
