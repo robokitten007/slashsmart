@@ -176,8 +176,8 @@ class FriendBillItem extends React.Component {
                         <div className='bill-details-2-right'>
                             <p className='fas fa-comment'>Notes and Comments:</p>
                             <p id={this.props.bill.notes ? 'show' : 'not-show'}className='bill-details-2-right-notes'>{this.props.bill.notes}</p>
-                        
-                        <button>Add notes</button>
+                            <form action=""></form>
+                        <button>Add comments</button>
                         </div>
 
                     </div>

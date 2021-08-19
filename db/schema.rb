@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_13_200443) do
+ActiveRecord::Schema.define(version: 2021_08_19_135146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,16 @@ ActiveRecord::Schema.define(version: 2021_07_13_200443) do
     t.boolean "paid_by_user"
     t.index ["friend_id"], name: "index_bills_on_friend_id"
     t.index ["user_id"], name: "index_bills_on_user_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "author_id", null: false
+    t.integer "bill_id", null: false
+    t.string "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_comments_on_author_id"
+    t.index ["bill_id"], name: "index_comments_on_bill_id"
   end
 
   create_table "friends", force: :cascade do |t|
