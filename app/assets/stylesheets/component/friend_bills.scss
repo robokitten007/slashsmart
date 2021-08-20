@@ -81,6 +81,7 @@
 
 #close-x{
     cursor: pointer;
+    // color: red;
 }
 
 .bill-index-item {
@@ -420,4 +421,8 @@ align-items: center;
 
 .no-show{
     display:none;
+}
+
+#close-y{
+    color:red;
 }

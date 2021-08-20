@@ -30,7 +30,7 @@ class CommentIndexItem extends React.Component{
                     <p className='comment-body'>{comment.body}</p>
             </span>
             <span className={this.showdelete}>
-                <div id='close-x' onClick={this.handleClick}>x</div>
+                <div id='close-y' onClick={this.handleClick}>x</div>
             </span>
         </li>
         )
