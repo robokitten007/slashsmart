@@ -1,5 +1,6 @@
 import React from 'react';
-
+import CommentIndexItem from './comment_index_item';
+import CreateCommentContainer from './create_comment_container'
 class CommentIndex extends React.Component{
     constructor(props){
         super(props)
@@ -10,27 +11,37 @@ class CommentIndex extends React.Component{
     }
 
    
-fetchBillComments(){
-    const {bill, comments} = this.props;
-    let billComments = []
+// fetchBillComments(){
+//     const {bill, comments} = this.props;
+//     let billComments = []
     
-    comments.forEach((comment)=>{
-        if(comment.bill_id === bill.id){
-            billComments.push(comment)
-        }
-    });
-    return billComments;
-}
+//     comments.forEach((comment)=>{
+//         if(comment.bill_id === bill.id){
+//             billComments.push(comment)
+//         }
+//     });
+//     return billComments;
+// }
 
 
     render(){
-        const {currentUser, bill, createComment, deleteComment} = this.props
-        // console.log(bill)
+        const {currentUser, bill, comments, deleteComment} = this.props
+      
     
         return (
             <div>
-                {/* <h1 className='far fa-comment'>Notes and Comments</h1> */}
-
+                <ul>
+            {comments.map(((comment)=>(
+                <CommentIndexItem 
+                    key={comment.id}
+                    currentUser={currentUser}
+                    comment ={comment}
+                    deleteComment = {deleteComment}
+                />
+            )))}
+                </ul>
+              {/* <button>create comment </button> */}
+                <CreateCommentContainer bill={bill}/>
             </div>
     
         )

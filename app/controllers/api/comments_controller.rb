@@ -21,7 +21,7 @@ def create
     if @comment.save
         render :show
     else 
-        render json: @comment.error.full_messages, status: 402 
+        render json: @comment.errors.full_messages, status: 402 
     end 
 end 
 
@@ -30,7 +30,7 @@ def destroy
     @comment = Comment.find_by(id: params[:id])
     if @comment
         @comment.destroy
-        render :show
+        render json: @comment.id
     else 
         render json: ['comment can not be deleted'], status: 401
     end 

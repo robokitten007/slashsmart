@@ -69,8 +69,7 @@ class FriendBillsIndex extends React.Component {
                     bill={bill}
                     updateBillForm={updateBillForm}
                 />
-                ))
-            )}
+                )))}
             </ul>
             </div>
         </div>

@@ -7,7 +7,6 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 
 
 const mSTP = state =>{
-    console.log('all expenses container')
     return (
         { 
             currentUser: state.entities.users[state.session.id],

@@ -4,12 +4,21 @@ import CommentIndex from './comment_index';
 import { fetchComments, fetchComment, deleteComment, createComment } from '../../actions/comment_actions'
 
 
-const mSTP = (state) =>{
+const mSTP = (state, ownProps) =>{
+    let billComments=[]
+    let comments = Object.values(state.entities.comments)
+    let bill = ownProps.bill
+    comments.forEach((comment)=>{
+        if(comment.bill_id === bill.id){
+            billComments.push(comment)
+        }
+    });
+
     return ({
         currentUser: state.entities.users[state.session.id],
-        comments: Object.values(state.entities.comments),
-        // bill: ownProps.bill
-
+        // comments: Object.values(state.entities.comments),
+        bill: ownProps.bill,
+        comments: billComments
     })
 }
 

@@ -11,7 +11,7 @@ let newState = Object.assign({}, state)
             return newState;
         case REMOVE_COMMENT:
             delete newState[action.id]
-            return newState
+            return newState;
         default:
             return state;
     }

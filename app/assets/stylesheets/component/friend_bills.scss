@@ -113,9 +113,6 @@
     color: black
 }
 
-
-
-
 .bill-right {
     display: flex;
     justify-content: center;
@@ -293,7 +290,7 @@ align-items: center;
     align-items: left;
 }
 .bill-details-2-right{
-    align-items: center;
+    align-items: left;
 }
 .bill-details-2-right{
     margin-right: 20px;
@@ -348,3 +345,75 @@ align-items: center;
 //     font-family: Lato;
 //     font-size: 14px;
 // }
+
+.comment-author {
+    color:black;
+    font-weight:400;
+}
+
+.comment-body{
+    margin-top: 5px;
+
+}
+
+.comment-form-container{
+    margin-top: 8px;
+}
+
+.comment-form{
+    display: flex; 
+    flex-direction: column;
+}
+
+.comment-form textarea{
+    border: solid 1px #e0e0e0;
+    margin-bottom: 8px;
+    padding: 5px;
+}
+.comment-item{
+    border: solid 1px #e0e0e0;
+    margin-bottom: 8px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment-item span{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.comment-item p{
+    margin-left: 5px;
+}
+
+.create-post-btn{
+    background-color: orangered;
+}
+
+.create-post-btn{
+  align-items: center;
+  cursor: pointer;
+  //height: 10px;
+  text-align: center;
+  line-height: 14px;
+  vertical-align: -5px;
+  width: 60px;
+  background-color: #ff652f;
+  font-family: Lato;
+  font-weight: 400;
+  font-size: 10px;
+  color: white;
+  border: 0px;
+  border-radius: 5px;
+  box-shadow: 0 4px 2px -2px gray;
+  padding: 5px 8px 5px 8px;
+  // line-height: 1.5px;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.create-post-btn:hover{
+  box-shadow: none;
+  position: relative;
+  top: 2px;
+}

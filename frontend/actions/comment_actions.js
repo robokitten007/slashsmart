@@ -16,7 +16,7 @@ const receiveComment = comment =>({
     comment
 })
 
-const removeComment = id =>({
+const removeComment = (id) =>({
     type: REMOVE_COMMENT,
     id
 })
@@ -48,7 +48,7 @@ export const fetchComment = (id) => dispatch=>(
 
 export const deleteComment =(id) =>dispatch=>(
     CommentsUtil.deleteComment(id)
-        .then(id => (dispatch(removeComment(id))),
+        .then((id) => (dispatch(removeComment(id))),
         err =>dispatch(commentErrors(err.responseJSON)))
 )
 
