@@ -2,12 +2,14 @@
 import { connect } from 'react-redux';
 import FriendRemove from './friend_remove';
 import { deleteFriend} from '../../actions/friend_actions';
+import { deleteBill } from '../../actions/bill_actions'
  
 
 
 
 const mSTP = (state, ownProps)=>{
     let friendshipId
+    let friendId
     let friendships = Object.values(state.entities.friends)
     if (friendships.length > 0){
         friendships.forEach((friendship) =>{
@@ -20,7 +22,10 @@ const mSTP = (state, ownProps)=>{
         })
     }
     return ({
-        id: friendshipId
+        id: friendshipId,
+        friendId: parseInt(ownProps.match.params.userId),
+        currentUser: state.entities.users[state.session.id],
+        bills: Object.values(state.entities.bills)
     })
     
 
@@ -28,6 +33,7 @@ const mSTP = (state, ownProps)=>{
 
 const mDTP = dispatch =>({
     deleteFriend: (id) => dispatch(deleteFriend(id)),
+    deleteBill: (id)=>dispatch(deleteBill(id))
     
 })
 

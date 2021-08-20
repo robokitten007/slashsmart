@@ -47,7 +47,7 @@ class Api::BillsController < ApplicationController
         if bill.destroy
             render json: bill.id
         else
-            render json: @bill.error.full_messages, status: 401
+            render json: @bill.errors.full_messages, status: 401
         end 
         
     end
