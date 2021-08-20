@@ -5,12 +5,12 @@ Object.freeze(state)
 let newState = Object.assign({}, state)
     switch(action.type){
         case RECEIVE_COMMENTS:
-            return action.commentsReducer;
+            return action.comments;
         case RECEIVE_COMMENT:
-            newState[action.commentsReducer.id] = action.comment
+            newState[action.comment.id] = action.comment
             return newState;
         case REMOVE_COMMENT:
-            delete newState[action.comment.id]
+            delete newState[action.id]
             return newState
         default:
             return state;
